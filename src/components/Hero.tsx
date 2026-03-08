@@ -25,7 +25,7 @@ export function Hero() {
               <span className="text-secondary italic">vazgeçtiğinde</span> kaybedersin.
             </h1>
             <p className="text-2xl text-muted-foreground leading-relaxed max-w-2xl font-medium">
-              İstanbul Milletvekili Av. Serkan Bayram liderliğinde, engelleri yasal reformlarla ve küresel vizyonla aşan, herkes için tam erişilebilir bir dünya inşa ediyoruz.
+              İstanbul Milletvekili Av. Serkan Bayram liderliğinde, engelleri yasal reformlarla ve küresel vizyonla aşan, herkes için tam engelsiz ve erişilebilir bir dünya inşa ediyoruz.
             </p>
             <div className="flex flex-wrap gap-6 pt-6">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-18 px-12 rounded-full group text-xl shadow-2xl shadow-primary/25">
