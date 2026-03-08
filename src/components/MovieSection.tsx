@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import { PlayCircle, Star, Award, Quote } from 'lucide-react';
+import { PlayCircle, Star, Award, Quote, Users2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
