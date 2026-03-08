@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from 'next/image';
@@ -10,15 +11,15 @@ export function MovieSection() {
   const fallback = "https://placehold.jp/24/1e3a8a/ffffff/600x850.png?text=Bugday+Tanesi+Film";
 
   return (
-    <section id="mucadele" className="py-40 bg-primary text-white overflow-hidden relative">
+    <section id="mucadele" className="py-24 bg-primary text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-1/2" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-24">
-          <div className="lg:w-2/5">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-24">
+          <div className="lg:w-2/5 w-full max-w-xs lg:max-w-none">
             <div className="relative group">
-              <div className="absolute -inset-10 border-4 border-secondary/40 rounded-[4rem] rotate-6 group-hover:rotate-0 transition-transform duration-700" />
-              <div className="relative aspect-[2/3] rounded-[3.5rem] overflow-hidden shadow-3xl border-[10px] border-white/10">
+              <div className="absolute -inset-6 border-2 border-secondary/40 rounded-[3rem] rotate-3 group-hover:rotate-0 transition-transform duration-700" />
+              <div className="relative aspect-[2/3] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/10">
                 <Image 
                   src={moviePoster?.imageUrl || fallback} 
                   alt="Buğday Tanesi Film Afişi" 
@@ -27,8 +28,8 @@ export function MovieSection() {
                   data-ai-hint="movie poster"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <Button className="bg-white text-primary hover:bg-secondary hover:text-white font-black py-8 px-10 rounded-2xl gap-3 text-xl shadow-2xl">
-                    <PlayCircle className="w-8 h-8" />
+                  <Button className="bg-white text-primary hover:bg-secondary hover:text-white font-black py-6 px-8 rounded-xl gap-2 text-base shadow-xl">
+                    <PlayCircle className="w-6 h-6" />
                     FRAGMANI İZLE
                   </Button>
                 </div>
@@ -36,43 +37,43 @@ export function MovieSection() {
             </div>
           </div>
 
-          <div className="lg:w-3/5 space-y-12">
-            <div className="inline-flex items-center gap-3 bg-secondary/20 text-secondary px-6 py-2 rounded-full font-black text-sm uppercase tracking-widest border border-secondary/30">
-              <Star className="w-5 h-5 fill-current" />
+          <div className="lg:w-3/5 space-y-8 text-left">
+            <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-1.5 rounded-full font-black text-[10px] uppercase tracking-widest border border-secondary/30">
+              <Star className="w-4 h-4 fill-current" />
               SİNEMADA BİR HAK MÜCADELESİ
             </div>
             
-            <h2 className="text-3xl lg:text-5xl font-headline font-black leading-[1.2] italic">
+            <h2 className="text-2xl lg:text-3xl font-headline font-black leading-tight italic">
               Buğday Tanesi: <br />
               <span className="text-secondary">Milyonların Umudu</span>
             </h2>
 
-            <div className="space-y-8 text-xl text-white/90 leading-relaxed font-medium">
+            <div className="space-y-6 text-lg text-white/90 leading-relaxed font-medium max-w-2xl">
               <p>
                 Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="p-6 bg-white/5 rounded-3xl border border-white/10">
-                  <Award className="w-8 h-8 text-secondary mb-4" />
-                  <h4 className="font-black text-xl mb-2">Uluslararası Ödüller</h4>
-                  <p className="text-sm text-white/60">Global film festivallerinde en iyi biyografi ödülleri.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-5 bg-white/5 rounded-2xl border border-white/10">
+                  <Award className="w-6 h-6 text-secondary mb-3" />
+                  <h4 className="font-black text-lg mb-1">Uluslararası Ödüller</h4>
+                  <p className="text-xs text-white/60">Global film festivallerinde en iyi biyografi ödülleri.</p>
                 </div>
-                <div className="p-6 bg-white/5 rounded-3xl border border-white/10">
-                  <Users className="w-8 h-8 text-secondary mb-4" />
-                  <h4 className="font-black text-xl mb-2">Küresel Yayın</h4>
-                  <p className="text-sm text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
+                <div className="p-5 bg-white/5 rounded-2xl border border-white/10">
+                  <Users className="w-6 h-6 text-secondary mb-3" />
+                  <h4 className="font-black text-lg mb-1">Küresel Yayın</h4>
+                  <p className="text-xs text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-12 border-t border-white/10">
-              <div className="flex items-start gap-8">
-                <Quote className="w-16 h-16 text-secondary opacity-40 shrink-0" />
-                <div className="space-y-4">
-                  <p className="text-2xl font-black italic tracking-tight leading-tight">
+            <div className="pt-8 border-t border-white/10">
+              <div className="flex items-start gap-6">
+                <Quote className="w-12 h-12 text-secondary opacity-40 shrink-0" />
+                <div className="space-y-2">
+                  <p className="text-xl font-black italic tracking-tight leading-tight">
                     "Yere düştüğünde değil, vazgeçtiğinde kaybedersin."
                   </p>
-                  <div className="text-base font-black text-secondary uppercase tracking-[0.25em]">Av. Serkan Bayram</div>
+                  <div className="text-[10px] font-black text-secondary uppercase tracking-[0.25em]">Av. Serkan Bayram</div>
                 </div>
               </div>
             </div>
