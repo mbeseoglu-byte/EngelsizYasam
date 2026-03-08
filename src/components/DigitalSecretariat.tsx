@@ -84,7 +84,7 @@ export function DigitalSecretariat() {
                 <Accessibility className="w-4 h-4" />
                 Dijital Sekreterya
               </div>
-              <h2 className="text-3xl lg:text-5xl font-headline font-black text-primary leading-tight">Engelsiz Erişim ve Talep Formu</h2>
+              <h2 className="text-2xl lg:text-4xl font-headline font-black text-primary leading-tight">Engelsiz Erişim ve Talep Formu</h2>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed font-medium">
               Görüş, öneri ve taleplerinizi bu form aracılığıyla doğrudan iletebilirsiniz. Yapay zeka destekli sistemimiz mesajınızı kategorize ederek hızlı çözüm üretmemize yardımcı olur.

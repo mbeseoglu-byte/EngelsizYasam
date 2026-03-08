@@ -33,7 +33,7 @@ export function LegislativeTimeline() {
             <Gavel className="w-4 h-4" />
             Yasa Değiştirici Güç
           </div>
-          <h2 className="text-3xl lg:text-5xl font-headline font-black text-primary mb-6">Tarihi Hukuk Reformları</h2>
+          <h2 className="text-2xl lg:text-4xl font-headline font-black text-primary mb-6">Tarihi Hukuk Reformları</h2>
           <p className="text-lg text-muted-foreground font-medium">
             Engelleri sadece zihinlerde değil, yasalarda da kaldırdık. 70 yıllık adaletsizliklere son veren reformlara öncülük ettik.
           </p>

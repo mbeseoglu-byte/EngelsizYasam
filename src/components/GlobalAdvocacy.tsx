@@ -19,7 +19,7 @@ export function GlobalAdvocacy() {
               <Globe2 className="w-4 h-4" />
               Küresel Elçi
             </div>
-            <h2 className="text-3xl lg:text-5xl font-headline font-black text-primary leading-tight">Sınırları Aşan Bir <br />Hak Savunuculuğu</h2>
+            <h2 className="text-2xl lg:text-4xl font-headline font-black text-primary leading-tight">Sınırları Aşan Bir <br />Hak Savunuculuğu</h2>
             <p className="text-lg text-muted-foreground leading-relaxed font-medium">
               Birleşmiş Milletler, Avrupa Konseyi ve dünya parlamentolarında Türkiye'nin "Erişilebilir Dünya" modelini anlatıyor, küresel bir farkındalık ağı örüyoruz.
             </p>
@@ -38,7 +38,7 @@ export function GlobalAdvocacy() {
           <div className="lg:w-1/2 relative">
             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-3xl border-8 border-muted/20">
               <Image 
-                src="https://placehold.jp/24/1e3a8a/ffffff/800x800.png?text=Dunya+Haritasi+ve+Etki+Alanlari" 
+                src="https://placehold.jp/24/1e3a8a/ffffff/800x800.png?text=Global+Advocacy" 
                 alt="Global Impact Map" 
                 fill 
                 className="object-cover opacity-80"

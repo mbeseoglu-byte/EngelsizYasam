@@ -20,7 +20,7 @@ export function Hero() {
               <Award className="w-5 h-5" />
               Buğday Tanesi: Engel Tanımayan Mücadele
             </div>
-            <h1 className="text-4xl lg:text-6xl font-headline font-black text-primary leading-[1.1] tracking-tight">
+            <h1 className="text-3xl lg:text-5xl font-headline font-black text-primary leading-[1.2] tracking-tight">
               Yere düştüğünde değil, <br />
               <span className="text-secondary italic">vazgeçtiğinde</span> kaybedersin.
             </h1>
@@ -54,19 +54,6 @@ export function Hero() {
                 priority
                 data-ai-hint="professional statesman"
               />
-            </div>
-            <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-[2.5rem] shadow-2xl border border-border hidden md:block max-w-[280px]">
-              <div className="space-y-5">
-                <div className="flex items-center gap-4">
-                  <div className="bg-secondary rounded-2xl p-3.5 shadow-lg shadow-secondary/20">
-                    <Award className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="text-base font-black text-primary uppercase tracking-widest">Vizyoner Lider</div>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed font-bold">
-                  Milyonlarca engelli bireyin sesi, küresel hak savunucusu.
-                </p>
-              </div>
             </div>
           </div>
         </div>

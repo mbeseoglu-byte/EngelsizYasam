@@ -42,7 +42,7 @@ export function MovieSection() {
               SİNEMADA BİR HAK MÜCADELESİ
             </div>
             
-            <h2 className="text-4xl lg:text-6xl font-headline font-black leading-[1.1] italic">
+            <h2 className="text-3xl lg:text-5xl font-headline font-black leading-[1.2] italic">
               Buğday Tanesi: <br />
               <span className="text-secondary">Milyonların Umudu</span>
             </h2>
