@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import { PlayCircle, Star, Award, Quote, Users2 } from 'lucide-react';
+import { PlayCircle, Star, Award, Quote, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -51,14 +51,14 @@ export function MovieSection() {
               <p>
                 Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü.
               </p>
-              <div className="grid grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="p-6 bg-white/5 rounded-3xl border border-white/10">
                   <Award className="w-8 h-8 text-secondary mb-4" />
                   <h4 className="font-black text-xl mb-2">Uluslararası Ödüller</h4>
                   <p className="text-sm text-white/60">Global film festivallerinde en iyi biyografi ödülleri.</p>
                 </div>
                 <div className="p-6 bg-white/5 rounded-3xl border border-white/10">
-                  <Users2 className="w-8 h-8 text-secondary mb-4" />
+                  <Users className="w-8 h-8 text-secondary mb-4" />
                   <h4 className="font-black text-xl mb-2">Küresel Yayın</h4>
                   <p className="text-sm text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
                 </div>

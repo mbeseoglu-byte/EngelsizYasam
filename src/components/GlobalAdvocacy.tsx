@@ -1,14 +1,13 @@
 "use client"
 
-import { Globe2, Landmark, Users2, MapPin, BarChart3 } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Globe2, Landmark, Users, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 export function GlobalAdvocacy() {
   const stats = [
     { label: "Ziyaret Edilen Ülke", value: "40+", icon: <Globe2 className="w-5 h-5" /> },
     { label: "Uluslararası Zirve", value: "150+", icon: <Landmark className="w-5 h-5" /> },
-    { label: "Ortak STK Ağı", value: "500+", icon: <Users2 className="w-5 h-5" /> }
+    { label: "Ortak STK Ağı", value: "500+", icon: <Users className="w-5 h-5" /> }
   ];
 
   return (
