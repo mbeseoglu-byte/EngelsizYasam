@@ -1,11 +1,10 @@
-
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { MovieSection } from '@/components/MovieSection';
+import { LegislativeTimeline } from '@/components/LegislativeTimeline';
 import { GlobalAdvocacy } from '@/components/GlobalAdvocacy';
-import { NewsSection } from '@/components/NewsSection';
-import { Biography } from '@/components/Biography';
-import { ContactForm } from '@/components/ContactForm';
+import { MovieSection } from '@/components/MovieSection';
+import { NobelVision } from '@/components/NobelVision';
+import { DigitalSecretariat } from '@/components/DigitalSecretariat';
 import { Footer } from '@/components/Footer';
 import { AccessibilityOverlay } from '@/components/AccessibilityOverlay';
 import { Toaster } from '@/components/ui/toaster';
@@ -18,11 +17,11 @@ export default function Home() {
       
       <main>
         <Hero />
-        <MovieSection />
-        <Biography />
+        <LegislativeTimeline />
         <GlobalAdvocacy />
-        <NewsSection />
-        <ContactForm />
+        <MovieSection />
+        <NobelVision />
+        <DigitalSecretariat />
       </main>
 
       <Footer />

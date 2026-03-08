@@ -5,25 +5,26 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 100% 5%;
+    --foreground: 221 65% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 210 100% 5%;
+    --card-foreground: 221 65% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 210 100% 5%;
-    --primary: 210 100% 20%; /* #003366 - AK Parti Lacivert */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 24 100% 50%; /* #FF6600 - AK Parti Turuncu */
+    --popover-foreground: 221 65% 10%;
+    --primary: 221 65% 33%; /* #1e3a8a - AK Parti Lacivert */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 33 100% 50%; /* #ff8c00 - AK Parti Turuncu */
     --secondary-foreground: 0 0% 100%;
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 20% 40%;
-    --accent: 24 100% 50%;
+    --muted: 221 20% 96%;
+    --muted-foreground: 221 20% 40%;
+    --accent: 33 100% 50%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 20%;
-    --radius: 1rem;
+    --border: 221 20% 90%;
+    --input: 221 20% 90%;
+    --ring: 221 65% 33%;
+    --radius: 1.25rem;
+    --nobel-gold: 45 100% 50%;
   }
 
   .high-contrast {
@@ -65,7 +66,22 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease, font-size 0.2s ease;
 }
 
-/* Custom Headline Font Styling */
 .font-headline {
   letter-spacing: -0.02em;
+}
+
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: hsl(var(--border));
+}
+
+@media (max-width: 768px) {
+  .timeline-line::before {
+    left: 20px;
+  }
 }

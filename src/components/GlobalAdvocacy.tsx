@@ -1,82 +1,58 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Globe2, Landmark, Users2, MapPin, BarChart3 } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
-import { Globe2, Landmark, ShieldCheck, Users2, MapPin } from 'lucide-react';
 
 export function GlobalAdvocacy() {
-  const advocacyItems = [
-    {
-      title: "Birleşmiş Milletler",
-      desc: "BM Engelli Hakları Sözleşmesi'nin küresel ölçekte uygulanması ve güçlendirilmesi için Cenevre ve New York'ta aktif savunuculuk.",
-      icon: <Globe2 className="w-9 h-9 text-white" />,
-      image: PlaceHolderImages.find(img => img.id === 'un-hq')?.imageUrl,
-      location: "New York / Cenevre"
-    },
-    {
-      title: "Uluslararası Parlamentolar",
-      desc: "Avrupa Konseyi ve farklı ülke parlamentolarında 'Erişilebilir Dünya' modelinin sunulması ve yasal iş birlikleri.",
-      icon: <Landmark className="w-9 h-9 text-white" />,
-      image: PlaceHolderImages.find(img => img.id === 'global-summit')?.imageUrl,
-      location: "Strazburg / Brüksel"
-    },
-    {
-      title: "Küresel İttifak Ağları",
-      desc: "Dünya genelindeki engelli federasyonları ve sivil toplum kuruluşları ile ortak hak savunuculuğu ağlarının kurulması.",
-      icon: <Users2 className="w-9 h-9 text-white" />,
-      image: PlaceHolderImages.find(img => img.id === 'international')?.imageUrl,
-      location: "Küresel Ağlar"
-    }
+  const stats = [
+    { label: "Ziyaret Edilen Ülke", value: "40+", icon: <Globe2 className="w-5 h-5" /> },
+    { label: "Uluslararası Zirve", value: "150+", icon: <Landmark className="w-5 h-5" /> },
+    { label: "Ortak STK Ağı", value: "500+", icon: <Users2 className="w-5 h-5" /> }
   ];
 
   return (
-    <section id="calismalar" className="py-40 bg-muted/30">
+    <section id="kuresel" className="py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-4xl mx-auto mb-24">
-          <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-2.5 rounded-full font-black text-sm mb-8 uppercase tracking-[0.2em] shadow-sm">
-            <ShieldCheck className="w-5 h-5" />
-            SINIR TANIMAYAN SAVUNUCULUK
+        <div className="flex flex-col lg:flex-row items-center gap-20">
+          <div className="lg:w-1/2 space-y-10">
+            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-black text-xs uppercase tracking-widest">
+              <Globe2 className="w-4 h-4" />
+              Küresel Elçi
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-headline font-black text-primary leading-tight">Sınırları Aşan Bir <br />Hak Savunuculuğu</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed font-medium">
+              Birleşmiş Milletler, Avrupa Konseyi ve dünya parlamentolarında Türkiye'nin "Erişilebilir Dünya" modelini anlatıyor, küresel bir farkındalık ağı örüyoruz.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {stats.map((stat, i) => (
+                <div key={i} className="p-6 bg-muted/30 rounded-3xl border border-primary/5 hover:bg-white hover:shadow-lg transition-all">
+                  <div className="text-secondary mb-3">{stat.icon}</div>
+                  <div className="text-3xl font-black text-primary mb-1">{stat.value}</div>
+                  <div className="text-sm font-bold text-muted-foreground uppercase tracking-tighter">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-          <h2 className="text-5xl lg:text-7xl font-headline font-black text-primary mb-10 tracking-tight">Küresel Etki ve Vizyon</h2>
-          <p className="text-2xl text-muted-foreground font-medium leading-relaxed">
-            Türkiye'nin engelsiz yaşam vizyonunu dünya başkentlerine taşıyor, uluslararası hukuk ve insan hakları platformlarında milyonların sesi oluyoruz.
-          </p>
-        </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
-          {advocacyItems.map((item, idx) => (
-            <Card key={idx} className="group overflow-hidden border-none shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_50px_100px_-20px_rgba(0,0,0,0.2)] transition-all duration-700 rounded-[3.5rem] bg-white">
-              <div className="relative h-80">
-                <Image 
-                  src={item.image || ""} 
-                  alt={item.title} 
-                  fill 
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                  data-ai-hint="international assembly"
-                />
-                <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/15 transition-colors duration-700" />
-                <div className="absolute bottom-8 right-8 bg-secondary p-5 rounded-[2rem] shadow-2xl scale-110 group-hover:rotate-12 transition-transform duration-500">
-                  {item.icon}
+          <div className="lg:w-1/2 relative">
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-3xl border-8 border-muted/20">
+              <Image 
+                src="https://placehold.jp/24/1e3a8a/ffffff/800x800.png?text=Dunya+Haritasi+ve+Etki+Alanlari" 
+                alt="Global Impact Map" 
+                fill 
+                className="object-cover opacity-80"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex flex-col justify-end p-12">
+                <div className="flex items-center gap-3 text-white mb-4">
+                  <MapPin className="w-6 h-6 text-secondary" />
+                  <span className="font-black text-2xl">New York / Cenevre / Strazburg</span>
                 </div>
-                <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-5 py-2 rounded-full flex items-center gap-2 text-primary font-black text-sm shadow-lg">
-                  <MapPin className="w-4 h-4 text-secondary" />
-                  {item.location}
-                </div>
+                <p className="text-white/80 font-medium">BM Engelli Hakları Sözleşmesi'nin küresel ölçekte güçlendirilmesi için çalışıyoruz.</p>
               </div>
-              <CardHeader className="p-10 pb-5">
-                <CardTitle className="text-3xl font-black text-primary group-hover:text-secondary transition-colors duration-300">
-                  {item.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-10 pt-0">
-                <CardDescription className="text-xl leading-relaxed text-muted-foreground font-medium mb-8">
-                  {item.desc}
-                </CardDescription>
-                <div className="h-1.5 w-16 bg-secondary rounded-full group-hover:w-full transition-all duration-700 ease-in-out" />
-              </CardContent>
-            </Card>
-          ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

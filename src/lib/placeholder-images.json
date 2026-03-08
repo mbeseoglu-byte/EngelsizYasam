@@ -3,56 +3,26 @@
     {
       "id": "hero-image",
       "description": "Av. Serkan Bayram Hitabet",
-      "imageUrl": "https://picsum.photos/seed/serkan-hero-alt/1200/800",
+      "imageUrl": "https://placehold.jp/24/1e3a8a/ffffff/1200x800.png?text=Av.+Serkan+Bayram",
       "imageHint": "statesman speaking"
     },
     {
       "id": "movie-poster",
       "description": "Buğday Tanesi Film Afişi",
-      "imageUrl": "https://picsum.photos/seed/bugday-movie/600/850",
+      "imageUrl": "https://placehold.jp/24/1e3a8a/ffffff/600x850.png?text=Bugday+Tanesi+Film",
       "imageHint": "movie poster"
     },
     {
-      "id": "legal-reform",
-      "description": "Adalet Reformu ve TBMM",
-      "imageUrl": "https://picsum.photos/seed/justice/800/500",
+      "id": "legislative",
+      "description": "Yasal Reformlar",
+      "imageUrl": "https://placehold.jp/24/1e3a8a/ffffff/800x500.png?text=Yasal+Reformlar",
       "imageHint": "justice gavel"
     },
     {
-      "id": "global-summit",
-      "description": "Uluslararası Zirve",
-      "imageUrl": "https://picsum.photos/seed/summit-advocacy/800/500",
-      "imageHint": "international meeting"
-    },
-    {
-      "id": "bio-portrait",
-      "description": "Av. Serkan Bayram Portre",
-      "imageUrl": "https://picsum.photos/seed/serkan-portrait/500/600",
-      "imageHint": "man portrait"
-    },
-    {
-      "id": "un-hq",
-      "description": "BM Genel Kurulu",
-      "imageUrl": "https://picsum.photos/seed/unhq-advocacy/800/500",
-      "imageHint": "united nations"
-    },
-    {
-      "id": "parliament",
-      "description": "TBMM Genel Kurulu",
-      "imageUrl": "https://picsum.photos/seed/tbmm/800/500",
-      "imageHint": "parliament building"
-    },
-    {
-      "id": "fieldwork",
-      "description": "Saha Çalışmaları",
-      "imageUrl": "https://picsum.photos/seed/field/800/500",
-      "imageHint": "community work"
-    },
-    {
-      "id": "international",
-      "description": "Uluslararası Görüşmeler",
-      "imageUrl": "https://picsum.photos/seed/intl-diplomacy/800/500",
-      "imageHint": "diplomacy handshake"
+      "id": "global-map",
+      "description": "Küresel Etki Haritası",
+      "imageUrl": "https://placehold.jp/24/1e3a8a/ffffff/800x800.png?text=Global+Advocacy",
+      "imageHint": "world map"
     }
   ]
 }

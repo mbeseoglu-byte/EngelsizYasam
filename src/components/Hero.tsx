@@ -3,11 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, Gavel } from 'lucide-react';
+import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-image');
+  const fallback = "https://placehold.jp/24/1e3a8a/ffffff/600x400.png?text=Serkan+Bayram";
 
   return (
     <section className="relative overflow-hidden bg-white pt-20 pb-32 lg:pt-32 lg:pb-48">
@@ -15,7 +16,7 @@ export function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-20">
           <div className="lg:w-3/5 space-y-10">
-            <div className="inline-flex items-center gap-3 bg-secondary/10 text-secondary px-6 py-2.5 rounded-full font-bold text-sm border border-secondary/20 shadow-sm">
+            <div className="inline-flex items-center gap-3 bg-secondary/10 text-secondary px-6 py-2.5 rounded-full font-bold text-sm border border-secondary/20 shadow-sm animate-fade-in">
               <Award className="w-5 h-5" />
               Buğday Tanesi: Engel Tanımayan Mücadele
             </div>
@@ -29,14 +30,14 @@ export function Hero() {
             <div className="flex flex-wrap gap-6 pt-6">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-18 px-12 rounded-full group text-xl shadow-2xl shadow-primary/25">
                 <Link href="#mucadele">
-                  Mücadelemizi Keşfedin
+                  Mücadeleyi Keşfet
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary/5 font-bold h-18 px-12 rounded-full text-xl">
-                <Link href="#haberler" className="flex items-center gap-2">
-                  <Gavel className="w-5 h-5" />
-                  Yasal Reformlar
+                <Link href="#yasa" className="flex items-center gap-2">
+                  <ShieldCheck className="w-5 h-5" />
+                  Yasal Başarılar
                 </Link>
               </Button>
             </div>
@@ -46,7 +47,7 @@ export function Hero() {
             <div className="absolute -inset-8 bg-secondary/15 rounded-[4rem] rotate-3 -z-10 blur-3xl opacity-60"></div>
             <div className="relative aspect-[3/4] rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border-[12px] border-white">
               <Image 
-                src={heroImage?.imageUrl || ""} 
+                src={heroImage?.imageUrl || fallback} 
                 alt="Av. Serkan Bayram"
                 fill
                 className="object-cover"

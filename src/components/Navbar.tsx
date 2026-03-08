@@ -11,11 +11,10 @@ export function Navbar() {
 
   const navItems = [
     { label: 'Anasayfa', href: '/' },
-    { label: 'Buğday Tanesi', href: '/#mucadele' },
-    { label: 'Yasal Reform', href: '/#reform' },
-    { label: 'Biyografi', href: '/#biyografi' },
-    { label: 'Küresel Etki', href: '/#calismalar' },
-    { label: 'Faaliyetler', href: '/faaliyetler' },
+    { label: 'Yasa Değiştirici', href: '#yasa' },
+    { label: 'Küresel Elçi', href: '#kuresel' },
+    { label: 'Buğday Tanesi', href: '#mucadele' },
+    { label: 'Nobel Vizyonu', href: '#nobel' },
   ];
 
   return (
@@ -33,7 +32,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-12">
+          <div className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
               <Link 
                 key={item.label} 
@@ -44,8 +43,8 @@ export function Navbar() {
               </Link>
             ))}
             <Button asChild variant="default" className="bg-primary hover:bg-secondary text-white px-10 h-14 rounded-full font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-300 shadow-xl shadow-primary/20 hover:-translate-y-1">
-              <Link href="/#iletisim" className="flex items-center gap-3">
-                Harekete Geç
+              <Link href="#iletisim" className="flex items-center gap-3">
+                Sekreterya
                 <Heart className="w-5 h-5 fill-current" />
               </Link>
             </Button>
@@ -79,7 +78,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button asChild className="w-full bg-primary py-10 text-2xl font-black uppercase tracking-widest rounded-[2rem] shadow-xl">
-            <Link href="/#iletisim" onClick={() => setIsMenuOpen(false)}>Harekete Geç</Link>
+            <Link href="#iletisim" onClick={() => setIsMenuOpen(false)}>Sekreterya</Link>
           </Button>
         </div>
       </div>
