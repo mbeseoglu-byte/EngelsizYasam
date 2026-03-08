@@ -4,6 +4,13 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Serkan Bayram | Engelsiz Dünya Platformu',
   description: 'Milletvekili Serkan Bayram liderliğinde dünya genelinde engelli hakları için çalışan, Türkiye merkezli küresel savunuculuk platformu.',
+  openGraph: {
+    title: 'Serkan Bayram | Engelsiz Dünya Platformu',
+    description: 'Engelsiz bir dünya için Serkan Bayram ile küresel hak savunuculuğu.',
+    type: 'website',
+    locale: 'tr_TR',
+    siteName: 'Serkan Bayram Resmi Web Sitesi',
+  }
 };
 
 export default function RootLayout({
