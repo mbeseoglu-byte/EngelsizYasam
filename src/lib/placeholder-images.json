@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Av. Serkan Bayram Küresel Hitabet",
-      "imageUrl": "https://picsum.photos/seed/serkan-hero/1200/800",
-      "imageHint": "professional statesman"
+      "description": "Av. Serkan Bayram Hitabet",
+      "imageUrl": "https://picsum.photos/seed/serkan-hero-alt/1200/800",
+      "imageHint": "statesman speaking"
     },
     {
       "id": "movie-poster",
@@ -14,27 +14,45 @@
     },
     {
       "id": "legal-reform",
-      "description": "TBMM Yasal Reform Görüşmeleri",
-      "imageUrl": "https://picsum.photos/seed/legal/800/500",
-      "imageHint": "law parliament"
+      "description": "Adalet Reformu ve TBMM",
+      "imageUrl": "https://picsum.photos/seed/justice/800/500",
+      "imageHint": "justice gavel"
     },
     {
       "id": "global-summit",
-      "description": "Uluslararası Engelli Hakları Zirvesi",
-      "imageUrl": "https://picsum.photos/seed/summit/800/500",
-      "imageHint": "international summit"
+      "description": "Uluslararası Zirve",
+      "imageUrl": "https://picsum.photos/seed/summit-advocacy/800/500",
+      "imageHint": "international meeting"
     },
     {
       "id": "bio-portrait",
       "description": "Av. Serkan Bayram Portre",
-      "imageUrl": "https://picsum.photos/seed/serkan-portre/500/600",
-      "imageHint": "formal portrait"
+      "imageUrl": "https://picsum.photos/seed/serkan-portrait/500/600",
+      "imageHint": "man portrait"
     },
     {
       "id": "un-hq",
-      "description": "BM Genel Kurulu Görüşmeleri",
-      "imageUrl": "https://picsum.photos/seed/unhq/800/500",
+      "description": "BM Genel Kurulu",
+      "imageUrl": "https://picsum.photos/seed/unhq-advocacy/800/500",
       "imageHint": "united nations"
+    },
+    {
+      "id": "parliament",
+      "description": "TBMM Genel Kurulu",
+      "imageUrl": "https://picsum.photos/seed/tbmm/800/500",
+      "imageHint": "parliament building"
+    },
+    {
+      "id": "fieldwork",
+      "description": "Saha Çalışmaları",
+      "imageUrl": "https://picsum.photos/seed/field/800/500",
+      "imageHint": "community work"
+    },
+    {
+      "id": "international",
+      "description": "Uluslararası Görüşmeler",
+      "imageUrl": "https://picsum.photos/seed/intl-diplomacy/800/500",
+      "imageHint": "diplomacy handshake"
     }
   ]
 }

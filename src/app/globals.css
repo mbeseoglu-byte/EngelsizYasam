@@ -10,9 +10,9 @@
     --card-foreground: 210 100% 5%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 100% 5%;
-    --primary: 210 100% 20%; /* #003366 - AK Parti Blue */
+    --primary: 210 100% 20%; /* #003366 - AK Parti Lacivert */
     --primary-foreground: 0 0% 98%;
-    --secondary: 24 100% 50%; /* #FF6600 - AK Parti Orange */
+    --secondary: 24 100% 50%; /* #FF6600 - AK Parti Turuncu */
     --secondary-foreground: 0 0% 100%;
     --muted: 210 20% 96%;
     --muted-foreground: 210 20% 40%;
@@ -23,12 +23,12 @@
     --border: 210 20% 90%;
     --input: 210 20% 90%;
     --ring: 210 100% 20%;
-    --radius: 0.75rem;
+    --radius: 1rem;
   }
 
   .high-contrast {
     --background: 0 0% 0%;
-    --foreground: 60 100% 50%; /* High contrast yellow on black */
+    --foreground: 60 100% 50%;
     --card: 0 0% 0%;
     --card-foreground: 60 100% 50%;
     --primary: 60 100% 50%;
@@ -49,7 +49,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
   }
 }
 
@@ -61,7 +61,11 @@
   font-size: 1.5rem;
 }
 
-/* Accessibility settings transition */
 body {
   transition: background-color 0.3s ease, color 0.3s ease, font-size 0.2s ease;
+}
+
+/* Custom Headline Font Styling */
+.font-headline {
+  letter-spacing: -0.02em;
 }
