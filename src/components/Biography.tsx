@@ -1,56 +1,69 @@
+
+"use client"
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Quote } from 'lucide-react';
+import { Quote, Flame, Heart } from 'lucide-react';
 
 export function Biography() {
   const bioImg = PlaceHolderImages.find(img => img.id === 'bio-portrait');
 
   return (
-    <section id="biyografi" className="py-24 bg-primary text-white overflow-hidden relative">
+    <section id="biyografi" className="py-32 bg-primary text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/5 -skew-x-12 translate-x-1/2" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          <div className="lg:w-1/3">
+        <div className="flex flex-col lg:flex-row items-center gap-20">
+          <div className="lg:w-2/5">
             <div className="relative">
-              <div className="absolute -inset-4 border-2 border-secondary/30 rounded-2xl rotate-3" />
-              <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-2 border-white/20">
+              <div className="absolute -inset-6 border-4 border-secondary/30 rounded-[3rem] rotate-6" />
+              <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20">
                 <Image 
                   src={bioImg?.imageUrl || ""} 
-                  alt="Serkan Bayram - Engelli Hakları Savunucusu" 
+                  alt="Av. Serkan Bayram" 
                   fill 
-                  className="object-cover"
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                 />
               </div>
             </div>
           </div>
 
-          <div className="lg:w-2/3 space-y-8">
-            <div className="flex items-center gap-4">
-              <div className="h-px w-12 bg-secondary" />
-              <h2 className="text-secondary font-black uppercase tracking-widest">Biyografi</h2>
+          <div className="lg:w-3/5 space-y-10">
+            <div className="flex items-center gap-6">
+              <div className="h-px w-16 bg-secondary" />
+              <h2 className="text-secondary font-black uppercase tracking-widest text-lg">Yaşam Öyküsü</h2>
             </div>
             
-            <h3 className="text-4xl lg:text-6xl font-headline font-black leading-tight italic">
-              "Engellilerin Sesi, <br />
-              <span className="text-secondary">Engelsiz ve Erişilebilir</span> Yarınların Mimarı."
+            <h3 className="text-4xl lg:text-7xl font-headline font-black leading-[1.1] italic">
+              "Küllerinden Doğan <br />
+              <span className="text-secondary">Bir Başarı Hikayesi.</span>"
             </h3>
 
-            <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
-              <p>
-                Hayatını engelli hakları mücadelesine adamış bir savunucu olarak, AK Parti çatısı altında hem Meclis'te hem de küresel platformlarda sesimizi duyuruyoruz. Türkiye'nin 20 yıldır engelliler alanında yazdığı başarı hikayesini, dünya genelinde bir model olarak sunmak en büyük gayemizdir.
-              </p>
-              <p>
-                Birleşmiş Milletler'den yerel yönetimlerimize kadar her platformda; sadece fiziksel değil, zihinsel bariyerlerin de yıkıldığı bir dünya için ter döküyoruz. "Engelsiz ve Erişilebilir Bir Dünya" hayali bizim için sadece bir slogan değil, her gün adım adım inşa ettiğimiz bir gerçektir.
-              </p>
+            <div className="space-y-8 text-xl text-white/80 leading-relaxed font-medium">
+              <div className="flex gap-6 items-start">
+                <div className="p-3 bg-secondary/20 rounded-xl mt-1">
+                  <Flame className="w-6 h-6 text-secondary" />
+                </div>
+                <p>
+                  Henüz bebekken tarlada çıkan yangın sonrası ellerini kaybeden Serkan Bayram, hayata küsmek yerine mücadeleyi seçti. "Buğday Tanesi" gibi her zorlukta daha güçlü yeşermeyi bildi.
+                </p>
+              </div>
+              <div className="flex gap-6 items-start">
+                <div className="p-3 bg-secondary/20 rounded-xl mt-1">
+                  <Heart className="w-6 h-6 text-secondary" />
+                </div>
+                <p>
+                  Erzincan'ın bir köyünden TBMM'ye uzanan bu yolculukta; bir hukukçu, bir milletvekili ve en önemlisi milyonların umudu olarak engelsiz ve erişilebilir bir dünya için durmaksızın çalışıyor.
+                </p>
+              </div>
             </div>
 
-            <div className="pt-8 border-t border-white/10">
-              <div className="flex items-center gap-6">
-                <Quote className="w-12 h-12 text-secondary opacity-50" />
-                <div className="space-y-1">
-                  <div className="text-xl font-black">Serkan Bayram</div>
-                  <div className="text-sm font-bold text-secondary uppercase tracking-widest">AK Parti Milletvekili & Savunucu</div>
+            <div className="pt-10 border-t border-white/10">
+              <div className="flex items-center gap-8">
+                <Quote className="w-16 h-16 text-secondary opacity-50" />
+                <div className="space-y-2">
+                  <div className="text-2xl font-black">Av. Serkan Bayram</div>
+                  <div className="text-sm font-black text-secondary uppercase tracking-[0.2em]">İstanbul Milletvekili & Hukukçu</div>
                 </div>
               </div>
             </div>

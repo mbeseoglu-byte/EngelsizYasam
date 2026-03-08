@@ -1,6 +1,8 @@
+
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { Initiatives } from '@/components/Initiatives';
+import { MovieSection } from '@/components/MovieSection';
+import { GlobalAdvocacy } from '@/components/GlobalAdvocacy';
 import { NewsSection } from '@/components/NewsSection';
 import { Biography } from '@/components/Biography';
 import { ContactForm } from '@/components/ContactForm';
@@ -16,8 +18,9 @@ export default function Home() {
       
       <main>
         <Hero />
-        <Initiatives />
+        <MovieSection />
         <Biography />
+        <GlobalAdvocacy />
         <NewsSection />
         <ContactForm />
       </main>

@@ -2,38 +2,38 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Engelli hakları savunucusu global bir toplantıda konuşurken",
-      "imageUrl": "https://picsum.photos/seed/engelsiz1/1200/800",
-      "imageHint": "advocacy meeting"
+      "description": "Av. Serkan Bayram Küresel Hitabet",
+      "imageUrl": "https://picsum.photos/seed/serkan-hero/1200/800",
+      "imageHint": "professional statesman"
     },
     {
-      "id": "parliament",
-      "description": "Meclis genel kurulu",
-      "imageUrl": "https://picsum.photos/seed/meclis/600/400",
-      "imageHint": "parliament building"
+      "id": "movie-poster",
+      "description": "Buğday Tanesi Film Afişi",
+      "imageUrl": "https://picsum.photos/seed/bugday-movie/600/850",
+      "imageHint": "movie poster"
     },
     {
-      "id": "fieldwork",
-      "description": "Engelli vatandaşlarla saha ziyareti",
-      "imageUrl": "https://picsum.photos/seed/saha/600/400",
-      "imageHint": "community outreach"
+      "id": "legal-reform",
+      "description": "TBMM Yasal Reform Görüşmeleri",
+      "imageUrl": "https://picsum.photos/seed/legal/800/500",
+      "imageHint": "law parliament"
     },
     {
-      "id": "international",
-      "description": "Uluslararası bir diplomasi görüşmesi",
-      "imageUrl": "https://picsum.photos/seed/diplomasi/600/400",
-      "imageHint": "international meeting"
+      "id": "global-summit",
+      "description": "Uluslararası Engelli Hakları Zirvesi",
+      "imageUrl": "https://picsum.photos/seed/summit/800/500",
+      "imageHint": "international summit"
     },
     {
       "id": "bio-portrait",
-      "description": "Milletvekili portre fotoğrafı",
-      "imageUrl": "https://picsum.photos/seed/milletvekili/500/600",
-      "imageHint": "professional portrait"
+      "description": "Av. Serkan Bayram Portre",
+      "imageUrl": "https://picsum.photos/seed/serkan-portre/500/600",
+      "imageHint": "formal portrait"
     },
     {
-      "id": "un-conference",
-      "description": "Birleşmiş Milletler Genel Kurulu",
-      "imageUrl": "https://picsum.photos/seed/un/600/400",
+      "id": "un-hq",
+      "description": "BM Genel Kurulu Görüşmeleri",
+      "imageUrl": "https://picsum.photos/seed/unhq/800/500",
       "imageHint": "united nations"
     }
   ]
