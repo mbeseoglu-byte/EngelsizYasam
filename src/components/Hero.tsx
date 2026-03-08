@@ -17,7 +17,7 @@ export function Hero() {
               Küresel Hak Savunuculuğu
             </div>
             <h1 className="text-4xl lg:text-6xl font-headline font-black text-primary leading-tight">
-              Herkes için <span className="text-secondary italic">erişilebilir</span> bir dünya.
+              Serkan Bayram ile <span className="text-secondary italic">erişilebilir</span> bir dünya.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
               Dünya genelinde engelli hakları için çalışıyoruz. Türkiye'nin vizyonunu küresel ölçekte paylaşarak, bariyerleri birlikte aşıyoruz.

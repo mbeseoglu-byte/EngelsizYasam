@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Globe, Accessibility } from 'lucide-react';
+import { Menu, X, Accessibility } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -27,8 +27,8 @@ export function Navbar() {
               <Accessibility className="w-6 h-6" />
             </div>
             <div className="flex flex-col">
-              <span className="font-headline font-bold text-xl text-primary leading-tight">Engelsiz Dünya</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-secondary font-bold">Erişilebilir Gelecek</span>
+              <span className="font-headline font-bold text-xl text-primary leading-tight">Serkan Bayram</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] text-secondary font-bold">Engelsiz Dünya</span>
             </div>
           </Link>
 
