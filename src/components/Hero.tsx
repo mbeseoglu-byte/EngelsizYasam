@@ -17,10 +17,10 @@ export function Hero() {
               Küresel Hak Savunuculuğu
             </div>
             <h1 className="text-4xl lg:text-6xl font-headline font-black text-primary leading-tight">
-              Serkan Bayram ile <span className="text-secondary italic">engelsiz</span> bir dünya.
+              Serkan Bayram ile <span className="text-secondary italic">engelsiz ve erişilebilir</span> bir dünya.
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Dünya genelinde engelli hakları için çalışıyoruz. Türkiye'nin vizyonunu küresel ölçekte paylaşarak, bariyerleri birlikte aşıyoruz.
+              Dünya genelinde engelli hakları için çalışıyoruz. Türkiye'nin vizyonunu küresel ölçekte paylaşarak, tüm bariyerleri birlikte aşıyoruz.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 rounded-full group">

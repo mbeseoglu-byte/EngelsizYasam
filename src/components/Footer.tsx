@@ -13,11 +13,11 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-headline font-black text-2xl leading-tight">Serkan Bayram</span>
-                <span className="text-xs uppercase tracking-[0.2em] text-secondary font-bold">Engelsiz Dünya Platformu</span>
+                <span className="text-xs uppercase tracking-[0.2em] text-secondary font-bold">Engelsiz ve Erişilebilir Dünya Platformu</span>
               </div>
             </Link>
             <p className="text-white/60 max-w-md text-lg leading-relaxed">
-              Dünya genelinde engelli hakları için sürdürdüğümüz mücadeleyi Türkiye vizyonu ile birleştiriyor, herkes için daha adil ve erişilebilir bir gelecek inşa ediyoruz.
+              Dünya genelinde engelli hakları için sürdürdüğümüz mücadeleyi Türkiye vizyonu ile birleştiriyor, herkes için daha adil, engelsiz ve erişilebilir bir gelecek inşa ediyoruz.
             </p>
           </div>
           
@@ -50,7 +50,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Serkan Bayram - Engelsiz Dünya Platformu. Tüm hakları saklıdır.
+            © {new Date().getFullYear()} Serkan Bayram - Engelsiz ve Erişilebilir Dünya Platformu. Tüm hakları saklıdır.
           </div>
           <div className="flex gap-4">
             <Link href="#" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-secondary hover:text-white transition-all">

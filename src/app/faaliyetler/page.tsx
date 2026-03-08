@@ -47,7 +47,7 @@ export default function FaaliyetlerPage() {
           <div className="max-w-4xl mx-auto mb-16">
             <h1 className="text-4xl lg:text-6xl font-headline font-black text-primary mb-6 text-center">Faaliyet Takvimimiz</h1>
             <p className="text-xl text-muted-foreground text-center">
-              Engelsiz bir dünya için planladığımız tüm etkinlik, zirve ve çalışmaları buradan takip edebilirsiniz.
+              Engelsiz ve erişilebilir bir dünya için planladığımız tüm etkinlik, zirve ve çalışmaları buradan takip edebilirsiniz.
             </p>
           </div>
 
