@@ -33,7 +33,7 @@ export function Biography() {
             
             <h3 className="text-4xl lg:text-6xl font-headline font-black leading-tight italic">
               "Engellilerin Sesi, <br />
-              <span className="text-secondary">Erişilebilir</span> Yarınların Mimarı."
+              <span className="text-secondary">Engelsiz</span> Yarınların Mimarı."
             </h3>
 
             <div className="space-y-6 text-lg text-white/80 leading-relaxed font-medium">
@@ -41,7 +41,7 @@ export function Biography() {
                 Hayatını engelli hakları mücadelesine adamış bir savunucu olarak, AK Parti çatısı altında hem Meclis'te hem de küresel platformlarda sesimizi duyuruyoruz. Türkiye'nin 20 yıldır engelliler alanında yazdığı başarı hikayesini, dünya genelinde bir model olarak sunmak en büyük gayemizdir.
               </p>
               <p>
-                Birleşmiş Milletler'den yerel yönetimlerimize kadar her platformda; sadece fiziksel değil, zihinsel bariyerlerin de yıkıldığı bir world için ter döküyoruz. "Engelsiz Bir Dünya" hayali bizim için sadece bir slogan değil, her gün adım adım inşa ettiğimiz bir gerçektir.
+                Birleşmiş Milletler'den yerel yönetimlerimize kadar her platformda; sadece fiziksel değil, zihinsel bariyerlerin de yıkıldığı bir dünya için ter döküyoruz. "Engelsiz Bir Dünya" hayali bizim için sadece bir slogan değil, her gün adım adım inşa ettiğimiz bir gerçektir.
               </p>
             </div>
 
