@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from 'next/image';
@@ -15,7 +14,7 @@ export function MovieSection() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-1/2" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
           <div className="lg:w-2/5 w-full max-w-xs lg:max-w-none">
             <div className="relative group">
               <div className="relative aspect-[2/3] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/10">
@@ -42,7 +41,7 @@ export function MovieSection() {
               SİNEMADA BİR HAK MÜCADELESİ
             </div>
             
-            <h2 className="text-xl lg:text-2xl font-headline font-black leading-tight italic">
+            <h2 className="text-2xl lg:text-4xl font-headline font-black leading-tight italic">
               Buğday Tanesi: <br />
               <span className="text-secondary">Milyonların Umudu</span>
             </h2>

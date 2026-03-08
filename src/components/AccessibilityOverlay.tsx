@@ -19,7 +19,7 @@ export function AccessibilityOverlay() {
   const { fontSize, setFontSize, highContrast, setHighContrast, dyslexicFont, setDyslexicFont } = useAccessibility();
 
   return (
-    <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[100] flex items-start transition-transform duration-300">
+    <div className="fixed left-0 bottom-8 z-[100] flex items-end transition-transform duration-300">
       <div 
         className={cn(
           "bg-white border-r border-y border-border shadow-2xl rounded-r-xl p-4 w-72 transition-all duration-300 ease-in-out",

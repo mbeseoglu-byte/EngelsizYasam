@@ -42,6 +42,7 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
+    // allowedDevOrigins is typed correctly in newer Next.js versions
     allowedDevOrigins: [
       '6000-firebase-studio-1772895054440.cluster-gjstlrnqpna56vr4xhdezmmq4e.cloudworkstations.dev'
     ]

@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from 'next/image';
@@ -12,16 +11,16 @@ export function Hero() {
   const fallback = "https://placehold.jp/24/1e3a8a/ffffff/600x400.png?text=Serkan+Bayram";
 
   return (
-    <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24">
+    <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4 -z-10" />
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
           <div className="lg:w-3/5 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" />
               Buğday Tanesi: Engel Tanımayan Mücadele
             </div>
-            <h1 className="text-2xl lg:text-3xl font-headline font-black text-primary leading-tight tracking-tight">
+            <h1 className="text-2xl lg:text-4xl font-headline font-black text-primary leading-tight tracking-tight">
               Yere düştüğünde değil, <br />
               <span className="text-secondary italic">vazgeçtiğinde</span> kaybedersin.
             </h1>

@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Medal, ShieldCheck, Heart, Sparkles } from 'lucide-react';
@@ -23,7 +22,7 @@ export function NobelVision() {
             <Medal className="w-3.5 h-3.5" />
             Nobel Barış Ödülü Vizyonu
           </div>
-          <h2 className="text-xl lg:text-2xl font-headline font-black mb-4 leading-tight tracking-tight">
+          <h2 className="text-2xl lg:text-4xl font-headline font-black mb-4 leading-tight tracking-tight">
             İnsanlık İçin <br />
             <span className="text-[#ffc107] italic">Nobel Adaylığı</span>
           </h2>
