@@ -2,8 +2,8 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Engelsiz Dünya Platformu',
-  description: 'Dünya genelinde engelli hakları için çalışan, Türkiye merkezli küresel savunuculuk platformu.',
+  title: 'Serkan Bayram | Engelsiz Dünya Platformu',
+  description: 'Milletvekili Serkan Bayram liderliğinde dünya genelinde engelli hakları için çalışan, Türkiye merkezli küresel savunuculuk platformu.',
 };
 
 export default function RootLayout({
