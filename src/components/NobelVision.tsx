@@ -22,11 +22,11 @@ export function NobelVision() {
             <Medal className="w-6 h-6" />
             Nobel Barış Ödülü Vizyonu
           </div>
-          <h2 className="text-5xl lg:text-8xl font-headline font-black mb-8 leading-tight tracking-tighter">
+          <h2 className="text-4xl lg:text-6xl font-headline font-black mb-8 leading-tight tracking-tighter">
             İnsanlık İçin <br />
             <span className="text-[#ffc107] italic">Nobel Adaylığı</span>
           </h2>
-          <p className="text-2xl text-white/70 leading-relaxed font-medium">
+          <p className="text-xl text-white/70 leading-relaxed font-medium">
             Av. Serkan Bayram'ın engelli hakları için yürüttüğü küresel mücadele, dünya barışına ve insan onuruna katkılarından dolayı Nobel Barış Ödülü adaylığı ile taçlanıyor.
           </p>
         </div>
@@ -37,7 +37,7 @@ export function NobelVision() {
               <div className="w-20 h-20 bg-[#ffc107] rounded-[2rem] flex items-center justify-center text-[#0a192f] mb-8 shadow-2xl group-hover:rotate-12 transition-transform">
                 {item.icon}
               </div>
-              <h3 className="text-3xl font-black mb-4 text-[#ffc107]">{item.title}</h3>
+              <h3 className="text-2xl font-black mb-4 text-[#ffc107]">{item.title}</h3>
               <p className="text-white/60 text-lg leading-relaxed">{item.desc}</p>
             </div>
           ))}

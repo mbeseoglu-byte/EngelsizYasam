@@ -20,21 +20,21 @@ export function Hero() {
               <Award className="w-5 h-5" />
               Buğday Tanesi: Engel Tanımayan Mücadele
             </div>
-            <h1 className="text-5xl lg:text-8xl font-headline font-black text-primary leading-[1.05] tracking-tight">
+            <h1 className="text-4xl lg:text-6xl font-headline font-black text-primary leading-[1.1] tracking-tight">
               Yere düştüğünde değil, <br />
               <span className="text-secondary italic">vazgeçtiğinde</span> kaybedersin.
             </h1>
-            <p className="text-2xl text-muted-foreground leading-relaxed max-w-2xl font-medium">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl font-medium">
               İstanbul Milletvekili Av. Serkan Bayram liderliğinde, engelleri yasal reformlarla ve küresel vizyonla aşan, herkes için tam engelsiz ve erişilebilir bir dünya inşa ediyoruz.
             </p>
             <div className="flex flex-wrap gap-6 pt-6">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-18 px-12 rounded-full group text-xl shadow-2xl shadow-primary/25">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-16 px-10 rounded-full group text-lg shadow-2xl shadow-primary/25">
                 <Link href="#mucadele">
                   Mücadeleyi Keşfet
-                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1.5 transition-transform" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary/5 font-bold h-18 px-12 rounded-full text-xl">
+              <Button asChild variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary/5 font-bold h-16 px-10 rounded-full text-lg">
                 <Link href="#yasa" className="flex items-center gap-2">
                   <ShieldCheck className="w-5 h-5" />
                   Yasal Başarılar

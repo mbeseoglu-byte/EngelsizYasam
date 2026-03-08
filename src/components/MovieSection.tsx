@@ -42,12 +42,12 @@ export function MovieSection() {
               SİNEMADA BİR HAK MÜCADELESİ
             </div>
             
-            <h2 className="text-5xl lg:text-8xl font-headline font-black leading-[1.05] italic">
+            <h2 className="text-4xl lg:text-6xl font-headline font-black leading-[1.1] italic">
               Buğday Tanesi: <br />
               <span className="text-secondary">Milyonların Umudu</span>
             </h2>
 
-            <div className="space-y-8 text-2xl text-white/90 leading-relaxed font-medium">
+            <div className="space-y-8 text-xl text-white/90 leading-relaxed font-medium">
               <p>
                 Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü.
               </p>
@@ -69,7 +69,7 @@ export function MovieSection() {
               <div className="flex items-start gap-8">
                 <Quote className="w-16 h-16 text-secondary opacity-40 shrink-0" />
                 <div className="space-y-4">
-                  <p className="text-3xl font-black italic tracking-tight leading-tight">
+                  <p className="text-2xl font-black italic tracking-tight leading-tight">
                     "Yere düştüğünde değil, vazgeçtiğinde kaybedersin."
                   </p>
                   <div className="text-base font-black text-secondary uppercase tracking-[0.25em]">Av. Serkan Bayram</div>

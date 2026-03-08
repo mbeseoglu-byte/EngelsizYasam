@@ -19,8 +19,8 @@ export function GlobalAdvocacy() {
               <Globe2 className="w-4 h-4" />
               Küresel Elçi
             </div>
-            <h2 className="text-4xl lg:text-6xl font-headline font-black text-primary leading-tight">Sınırları Aşan Bir <br />Hak Savunuculuğu</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed font-medium">
+            <h2 className="text-3xl lg:text-5xl font-headline font-black text-primary leading-tight">Sınırları Aşan Bir <br />Hak Savunuculuğu</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed font-medium">
               Birleşmiş Milletler, Avrupa Konseyi ve dünya parlamentolarında Türkiye'nin "Erişilebilir Dünya" modelini anlatıyor, küresel bir farkındalık ağı örüyoruz.
             </p>
             
@@ -28,8 +28,8 @@ export function GlobalAdvocacy() {
               {stats.map((stat, i) => (
                 <div key={i} className="p-6 bg-muted/30 rounded-3xl border border-primary/5 hover:bg-white hover:shadow-lg transition-all">
                   <div className="text-secondary mb-3">{stat.icon}</div>
-                  <div className="text-3xl font-black text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm font-bold text-muted-foreground uppercase tracking-tighter">{stat.label}</div>
+                  <div className="text-2xl font-black text-primary mb-1">{stat.value}</div>
+                  <div className="text-xs font-bold text-muted-foreground uppercase tracking-tighter">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -46,7 +46,7 @@ export function GlobalAdvocacy() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex flex-col justify-end p-12">
                 <div className="flex items-center gap-3 text-white mb-4">
                   <MapPin className="w-6 h-6 text-secondary" />
-                  <span className="font-black text-2xl">New York / Cenevre / Strazburg</span>
+                  <span className="font-black text-xl">New York / Cenevre / Strazburg</span>
                 </div>
                 <p className="text-white/80 font-medium">BM Engelli Hakları Sözleşmesi'nin küresel ölçekte güçlendirilmesi için çalışıyoruz.</p>
               </div>

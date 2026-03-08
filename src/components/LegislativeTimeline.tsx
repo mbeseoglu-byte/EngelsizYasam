@@ -33,8 +33,8 @@ export function LegislativeTimeline() {
             <Gavel className="w-4 h-4" />
             Yasa Değiştirici Güç
           </div>
-          <h2 className="text-4xl lg:text-6xl font-headline font-black text-primary mb-6">Tarihi Hukuk Reformları</h2>
-          <p className="text-xl text-muted-foreground font-medium">
+          <h2 className="text-3xl lg:text-5xl font-headline font-black text-primary mb-6">Tarihi Hukuk Reformları</h2>
+          <p className="text-lg text-muted-foreground font-medium">
             Engelleri sadece zihinlerde değil, yasalarda da kaldırdık. 70 yıllık adaletsizliklere son veren reformlara öncülük ettik.
           </p>
         </div>
@@ -44,15 +44,15 @@ export function LegislativeTimeline() {
             <div key={idx} className={`flex flex-col md:flex-row items-center gap-8 mb-20 relative z-10 ${idx % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
               <div className="flex-1 w-full">
                 <Card className={`border-none shadow-xl hover:shadow-2xl transition-all duration-300 rounded-[2.5rem] bg-white group overflow-hidden ${idx % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                  <CardContent className="p-10">
-                    <div className={`text-4xl font-black text-secondary mb-4 ${idx % 2 === 0 ? 'md:mr-2' : 'md:ml-2'}`}>{item.year}</div>
-                    <h3 className="text-2xl font-black text-primary mb-4 group-hover:text-secondary transition-colors">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed text-lg">{item.desc}</p>
+                  <CardContent className="p-8">
+                    <div className={`text-3xl font-black text-secondary mb-3 ${idx % 2 === 0 ? 'md:mr-2' : 'md:ml-2'}`}>{item.year}</div>
+                    <h3 className="text-xl font-black text-primary mb-3 group-hover:text-secondary transition-colors">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-base">{item.desc}</p>
                   </CardContent>
                 </Card>
               </div>
               
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white shadow-2xl z-20 shrink-0 border-4 border-white">
+              <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white shadow-2xl z-20 shrink-0 border-4 border-white">
                 {item.icon}
               </div>
               
