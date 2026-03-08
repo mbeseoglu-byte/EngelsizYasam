@@ -17,7 +17,7 @@ export function Biography() {
               <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-2 border-white/20">
                 <Image 
                   src={bioImg?.imageUrl || ""} 
-                  alt="Engelli Hakları Savunucusu" 
+                  alt="Serkan Bayram - Engelli Hakları Savunucusu" 
                   fill 
                   className="object-cover"
                 />
@@ -41,7 +41,7 @@ export function Biography() {
                 Hayatını engelli hakları mücadelesine adamış bir savunucu olarak, AK Parti çatısı altında hem Meclis'te hem de küresel platformlarda sesimizi duyuruyoruz. Türkiye'nin 20 yıldır engelliler alanında yazdığı başarı hikayesini, dünya genelinde bir model olarak sunmak en büyük gayemizdir.
               </p>
               <p>
-                Birleşmiş Milletler'den yerel yönetimlerimize kadar her platformda; sadece fiziksel değil, zihinsel bariyerlerin de yıkıldığı bir dünya için ter döküyoruz. "Engelsiz Bir Dünya" hayali bizim için sadece bir slogan değil, her gün adım adım inşa ettiğimiz bir gerçektir.
+                Birleşmiş Milletler'den yerel yönetimlerimize kadar her platformda; sadece fiziksel değil, zihinsel bariyerlerin de yıkıldığı bir world için ter döküyoruz. "Engelsiz Bir Dünya" hayali bizim için sadece bir slogan değil, her gün adım adım inşa ettiğimiz bir gerçektir.
               </p>
             </div>
 
@@ -49,7 +49,7 @@ export function Biography() {
               <div className="flex items-center gap-6">
                 <Quote className="w-12 h-12 text-secondary opacity-50" />
                 <div className="space-y-1">
-                  <div className="text-xl font-black">H. Ibrahim</div>
+                  <div className="text-xl font-black">Serkan Bayram</div>
                   <div className="text-sm font-bold text-secondary uppercase tracking-widest">AK Parti Milletvekili & Savunucu</div>
                 </div>
               </div>
