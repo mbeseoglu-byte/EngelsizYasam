@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Medal, ShieldCheck, Heart, Sparkles } from 'lucide-react';

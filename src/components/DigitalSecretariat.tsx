@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
-import { Send, Loader2, CheckCircle2, MessageSquare, Accessibility } from 'lucide-react';
+import { Send, Loader2, CheckCircle2, Accessibility } from 'lucide-react';
 import { categorizeContactMessage } from '@/ai/flows/categorize-contact-messages-ai';
 
 const formSchema = z.object({
