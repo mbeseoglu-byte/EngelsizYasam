@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Engelli hakları savunucusu global bir toplantıda konuşurken",
+      "imageUrl": "https://picsum.photos/seed/engelsiz1/1200/800",
+      "imageHint": "advocacy meeting"
+    },
+    {
+      "id": "parliament",
+      "description": "Meclis genel kurulu",
+      "imageUrl": "https://picsum.photos/seed/meclis/600/400",
+      "imageHint": "parliament building"
+    },
+    {
+      "id": "fieldwork",
+      "description": "Engelli vatandaşlarla saha ziyareti",
+      "imageUrl": "https://picsum.photos/seed/saha/600/400",
+      "imageHint": "community outreach"
+    },
+    {
+      "id": "international",
+      "description": "Uluslararası bir diplomasi görüşmesi",
+      "imageUrl": "https://picsum.photos/seed/diplomasi/600/400",
+      "imageHint": "international meeting"
+    },
+    {
+      "id": "bio-portrait",
+      "description": "Milletvekili portre fotoğrafı",
+      "imageUrl": "https://picsum.photos/seed/milletvekili/500/600",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "un-conference",
+      "description": "Birleşmiş Milletler Genel Kurulu",
+      "imageUrl": "https://picsum.photos/seed/un/600/400",
+      "imageHint": "united nations"
+    }
+  ]
 }
