@@ -37,7 +37,7 @@ export function MovieSection() {
               SİNEMADA BİR HAK MÜCADELESİ
             </div>
             
-            <h2 className="text-2xl lg:text-4xl font-headline font-black leading-tight italic">
+            <h2 className="text-2xl lg:text-3xl font-headline font-black leading-tight italic">
               Vazgeçmeyenlerin Hikayesi: <br />
               <span className="text-secondary">Buğday Tanesi</span>
             </h2>
@@ -54,8 +54,8 @@ export function MovieSection() {
                 </div>
                 <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                   <Users className="w-6 h-6 text-secondary mb-4" />
-                  <h4 className="font-black text-xl mb-2">Küresel Yayın</h4>
-                  <p className="text-sm text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
+                  <h4 className="font-black text-lg mb-2">Küresel Yayın</h4>
+                  <p className="text-xs text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
                 </div>
               </div>
             </div>
