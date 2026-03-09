@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from 'next/image';
@@ -7,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
-  const fallback = "https://placehold.jp/24/1e3a8a/ffffff/600x400.png?text=Serkan+Bayram";
+  const heroImage = "https://placehold.jp/24/1e3a8a/ffffff/600x800.png?text=Av.+Serkan+Bayram";
 
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
@@ -42,10 +41,10 @@ export function Hero() {
             </div>
           </div>
           
-          <div className="lg:w-2/5 w-full max-w-sm lg:max-w-none relative ml-0">
-            <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
+          <div className="lg:w-1/3 w-full max-w-[280px] lg:max-w-[320px] relative ml-0 lg:ml-auto">
+            <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
               <Image 
-                src={fallback} 
+                src={heroImage} 
                 alt="Av. Serkan Bayram"
                 fill
                 className="object-cover"
