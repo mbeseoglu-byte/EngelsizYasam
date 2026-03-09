@@ -16,7 +16,7 @@ export function MovieSection() {
                 <iframe 
                   width="100%" 
                   height="100%" 
-                  src="https://www.youtube.com/embed/p4U6C8S-v68" 
+                  src="https://www.youtube.com/embed/864yL2H6ISE" 
                   title="Buğday Tanesi Film Fragmanı" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
