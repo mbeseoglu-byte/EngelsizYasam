@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from 'next/image';
@@ -6,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
-  const heroImage = "https://placehold.jp/24/1e3a8a/ffffff/600x800.png?text=Av.+Serkan+Bayram";
+  const heroImage = "https://picsum.photos/seed/serkan/600/800";
 
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
@@ -41,7 +42,7 @@ export function Hero() {
             </div>
           </div>
           
-          <div className="lg:w-1/3 w-full max-w-[280px] lg:max-w-[320px] relative ml-0 lg:ml-auto">
+          <div className="lg:w-1/4 w-full max-w-[240px] lg:max-w-[280px] relative ml-0 lg:ml-auto">
             <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
               <Image 
                 src={heroImage} 
@@ -51,6 +52,10 @@ export function Hero() {
                 priority
                 data-ai-hint="professional statesman"
               />
+            </div>
+            <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl border border-primary/10 hidden lg:block">
+              <div className="text-[10px] font-black text-primary uppercase tracking-widest">Milletvekili</div>
+              <div className="text-xs font-bold text-secondary">Av. Serkan Bayram</div>
             </div>
           </div>
         </div>
