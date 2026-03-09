@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
-  // Serkan Bayram'ı temsil eden profesyonel bir portre görseli
-  const heroImage = "https://picsum.photos/seed/statesman-portrait/600/800";
+  // Serkan Bayram'ın profesyonel devlet adamı portresi
+  const heroImage = "https://picsum.photos/seed/serkan-bayram-statesman/600/800";
 
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
@@ -43,8 +43,7 @@ export function Hero() {
             </div>
           </div>
           
-          {/* Görsel boyutu daha da küçültüldü ve sola hiyerarşisine uygun sağda ama kompakt konumlandırıldı */}
-          <div className="lg:w-1/4 w-full max-w-[180px] lg:max-w-[220px] relative ml-0 lg:ml-auto">
+          <div className="lg:w-1/5 w-full max-w-[160px] lg:max-w-[200px] relative ml-0 lg:ml-auto">
             <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
               <Image 
                 src={heroImage} 
