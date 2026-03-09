@@ -1,13 +1,12 @@
+
 "use client"
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(img => img.id === 'hero-image');
   const fallback = "https://placehold.jp/24/1e3a8a/ffffff/600x400.png?text=Serkan+Bayram";
 
   return (
@@ -18,14 +17,14 @@ export function Hero() {
           <div className="lg:w-3/5 space-y-6">
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" />
-              Buğday Tanesi: Engel Tanımayan Mücadele
+              Engelsiz ve Erişilebilir Bir Dünya
             </div>
             <h1 className="text-2xl lg:text-4xl font-headline font-black text-primary leading-tight tracking-tight">
               Yere düştüğünde değil, <br />
               <span className="text-secondary italic">vazgeçtiğinde</span> kaybedersin.
             </h1>
             <p className="text-base text-muted-foreground leading-relaxed max-w-xl font-medium">
-              İstanbul Milletvekili Av. Serkan Bayram liderliğinde, engelleri yasal reformlarla ve küresel vizyonla aşan, herkes için tam engelsiz ve erişilebilir bir dünya inşa ediyoruz.
+              Engelsiz Bir Dünya İçin Küresel Mücadele ve Yasama Çalışmaları. İstanbul Milletvekili Av. Serkan Bayram liderliğinde, engelleri yasal reformlarla ve küresel vizyonla aşıyoruz.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-12 px-6 rounded-full group text-sm shadow-lg shadow-primary/20">
@@ -46,7 +45,7 @@ export function Hero() {
           <div className="lg:w-2/5 w-full max-w-sm lg:max-w-none relative ml-0">
             <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
               <Image 
-                src={heroImage?.imageUrl || fallback} 
+                src={fallback} 
                 alt="Av. Serkan Bayram"
                 fill
                 className="object-cover"

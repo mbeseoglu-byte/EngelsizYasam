@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from 'next/link';
@@ -26,7 +27,7 @@ export function Navbar() {
               <Accessibility className="w-6 h-6" />
             </div>
             <div className="flex flex-col">
-              <span className="font-headline font-black text-lg text-primary leading-tight tracking-tight">Av. Serkan Bayram</span>
+              <span className="font-headline font-black text-base text-primary leading-tight tracking-tight">Av. Serkan Bayram</span>
               <span className="text-[8px] uppercase tracking-[0.2em] text-secondary font-black">Engelsiz ve Erişilebilir Dünya</span>
             </div>
           </Link>

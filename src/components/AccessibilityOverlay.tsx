@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState } from 'react';
@@ -85,7 +86,7 @@ export function AccessibilityOverlay() {
 
           <section>
             <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
-              Okuma Desteği
+              Okuma Modu
             </label>
             <Button 
               variant={dyslexicFont ? 'default' : 'outline'} 
