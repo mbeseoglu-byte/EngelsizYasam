@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
+import { Biography } from '@/components/Biography';
 import { LegislativeTimeline } from '@/components/LegislativeTimeline';
 import { GlobalAdvocacy } from '@/components/GlobalAdvocacy';
 import { MovieSection } from '@/components/MovieSection';
@@ -17,6 +18,7 @@ export default function Home() {
       
       <main>
         <Hero />
+        <Biography />
         <LegislativeTimeline />
         <GlobalAdvocacy />
         <MovieSection />

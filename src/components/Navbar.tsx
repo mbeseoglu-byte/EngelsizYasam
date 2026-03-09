@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from 'next/link';
@@ -19,8 +18,8 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-[100] bg-white/95 backdrop-blur-xl border-b border-border transition-all duration-300">
-      <div className="container mx-auto px-4">
+    <nav className="sticky top-0 z-[100] bg-white/95 backdrop-blur-xl border-b border-border">
+      <div className="container px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 shadow-lg shadow-primary/30">
@@ -43,7 +42,7 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-primary hover:bg-secondary text-white px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all duration-300 shadow-md shadow-primary/20">
+            <Button asChild variant="default" className="bg-primary hover:bg-secondary text-white px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all shadow-md shadow-primary/20">
               <Link href="#iletisim" className="flex items-center gap-2">
                 Dijital Sekreterya
                 <Accessibility className="w-4 h-4" />
@@ -66,7 +65,7 @@ export function Navbar() {
         "lg:hidden absolute top-[80px] left-0 w-full bg-white border-b border-border shadow-xl transition-all duration-500 ease-in-out z-[90] overflow-hidden",
         isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 pointer-events-none"
       )}>
-        <div className="container mx-auto px-6 py-8 flex flex-col gap-4">
+        <div className="container px-6 py-8 flex flex-col gap-4">
           {navItems.map((item) => (
             <Link 
               key={item.label} 

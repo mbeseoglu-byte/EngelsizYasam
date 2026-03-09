@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from 'next/image';
@@ -14,9 +13,9 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4 -z-10" />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-          <div className="lg:w-3/5 space-y-6 text-left">
+      <div className="container px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16 text-left">
+          <div className="lg:w-3/5 space-y-6">
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" />
               Buğday Tanesi: Engel Tanımayan Mücadele
@@ -44,7 +43,7 @@ export function Hero() {
             </div>
           </div>
           
-          <div className="lg:w-2/5 w-full max-w-sm lg:max-w-none relative">
+          <div className="lg:w-2/5 w-full max-w-sm lg:max-w-none relative ml-0">
             <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
               <Image 
                 src={heroImage?.imageUrl || fallback} 

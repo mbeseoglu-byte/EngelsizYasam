@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from 'next/image';
@@ -14,8 +13,8 @@ export function MovieSection() {
     <section id="mucadele" className="py-20 bg-primary text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-1/2" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+      <div className="container px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16 text-left">
           <div className="lg:w-2/5 w-full max-w-xs lg:max-w-none">
             <div className="relative group">
               <div className="relative aspect-[2/3] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white/10">
@@ -36,7 +35,7 @@ export function MovieSection() {
             </div>
           </div>
 
-          <div className="lg:w-3/5 space-y-6 text-left">
+          <div className="lg:w-3/5 space-y-6">
             <div className="inline-flex items-center gap-2 bg-secondary/20 text-secondary px-4 py-1.5 rounded-full font-black text-[10px] uppercase tracking-widest border border-secondary/30">
               <Star className="w-3.5 h-3.5 fill-current" />
               SİNEMADA BİR HAK MÜCADELESİ
@@ -48,7 +47,7 @@ export function MovieSection() {
             </h2>
 
             <div className="space-y-4 text-base text-white/90 leading-relaxed font-medium max-w-2xl">
-              <p>
+              <p className="text-sm">
                 Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -59,8 +58,8 @@ export function MovieSection() {
                 </div>
                 <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
                   <Users className="w-6 h-6 text-secondary mb-4" />
-                  <h4 className="font-black text-lg mb-2">Küresel Yayın</h4>
-                  <p className="text-xs text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
+                  <h4 className="font-black text-xl mb-2">Küresel Yayın</h4>
+                  <p className="text-sm text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>
                 </div>
               </div>
             </div>

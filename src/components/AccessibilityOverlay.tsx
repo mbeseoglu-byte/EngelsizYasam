@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState } from 'react';
@@ -20,7 +19,7 @@ export function AccessibilityOverlay() {
   const { fontSize, setFontSize, highContrast, setHighContrast, dyslexicFont, setDyslexicFont } = useAccessibility();
 
   return (
-    <div className="fixed left-0 bottom-8 z-[100] flex items-end transition-transform duration-300">
+    <div className="fixed left-0 bottom-8 z-[110] flex items-end transition-transform duration-300">
       <div 
         className={cn(
           "bg-white border-r border-y border-border shadow-2xl rounded-r-xl p-4 w-72 transition-all duration-300 ease-in-out",
@@ -28,18 +27,18 @@ export function AccessibilityOverlay() {
         )}
       >
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-lg font-bold text-primary flex items-center gap-2">
-            <Accessibility className="w-5 h-5" />
+          <h2 className="text-base font-bold text-primary flex items-center gap-2">
+            <Accessibility className="w-4 h-4" />
             Erişilebilirlik
           </h2>
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} aria-label="Kapat">
+          <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} aria-label="Kapat" className="h-8 w-8">
             <X className="w-4 h-4" />
           </Button>
         </div>
 
         <div className="space-y-6">
           <section>
-            <label className="text-sm font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
+            <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
               Yazı Boyutu
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -47,6 +46,7 @@ export function AccessibilityOverlay() {
                 variant={fontSize === 'normal' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setFontSize('normal')}
+                className="h-8 text-xs"
               >
                 A
               </Button>
@@ -54,6 +54,7 @@ export function AccessibilityOverlay() {
                 variant={fontSize === 'large' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setFontSize('large')}
+                className="h-8 text-xs"
               >
                 A+
               </Button>
@@ -61,6 +62,7 @@ export function AccessibilityOverlay() {
                 variant={fontSize === 'xlarge' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setFontSize('xlarge')}
+                className="h-8 text-xs"
               >
                 A++
               </Button>
@@ -68,29 +70,29 @@ export function AccessibilityOverlay() {
           </section>
 
           <section>
-            <label className="text-sm font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
+            <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
               Görünüm
             </label>
             <Button 
               variant={highContrast ? 'default' : 'outline'} 
-              className="w-full justify-start gap-3"
+              className="w-full justify-start gap-3 h-10 text-xs"
               onClick={() => setHighContrast(!highContrast)}
             >
-              <Contrast className="w-4 h-4" />
+              <Contrast className="w-3.5 h-3.5" />
               Yüksek Kontrast
             </Button>
           </section>
 
           <section>
-            <label className="text-sm font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
+            <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
               Okuma Desteği
             </label>
             <Button 
               variant={dyslexicFont ? 'default' : 'outline'} 
-              className="w-full justify-start gap-3"
+              className="w-full justify-start gap-3 h-10 text-xs"
               onClick={() => setDyslexicFont(!dyslexicFont)}
             >
-              <BookOpen className="w-4 h-4" />
+              <BookOpen className="w-3.5 h-3.5" />
               Disleksi Dostu Font
             </Button>
           </section>
