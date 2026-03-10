@@ -4,6 +4,13 @@ import Link from 'next/link';
 import { Accessibility, Facebook, Twitter, Instagram, Youtube, Mail, Heart, Medal } from 'lucide-react';
 
 export function Footer() {
+  const socialLinks = [
+    { Icon: Facebook, href: "#" },
+    { Icon: Twitter, href: "#" },
+    { Icon: Instagram, href: "#" },
+    { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935" }
+  ];
+
   return (
     <footer className="bg-[#0a192f] text-white py-24 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-1/3 h-full bg-secondary/5 skew-y-12 translate-y-1/2" />
@@ -23,9 +30,15 @@ export function Footer() {
               "Yere düştüğünde değil, vazgeçtiğinde kaybedersin." anlayışıyla engelleri aşan bir gelecek için küresel ölçekte çalışıyoruz.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-                <Link key={i} href="#" className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-[#ffc107] hover:text-[#0a192f] transition-all hover:-translate-y-1">
-                  <Icon className="w-6 h-6" />
+              {socialLinks.map((social, i) => (
+                <Link 
+                  key={i} 
+                  href={social.href} 
+                  target={social.href.startsWith('http') ? "_blank" : undefined}
+                  rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-[#ffc107] hover:text-[#0a192f] transition-all hover:-translate-y-1"
+                >
+                  <social.Icon className="w-6 h-6" />
                 </Link>
               ))}
             </div>
@@ -44,7 +57,7 @@ export function Footer() {
 
           <div className="space-y-8">
             <h4 className="font-black text-2xl text-[#ffc107] uppercase tracking-widest">Vizyon 2030</h4>
-            <p className="text-white/60 font-medium">Tam erişilebilir ve engelsiz bir dünya için mücadelemiz sürüyor.</p>
+            <p className="text-white/60 font-medium">Tam erişilebilir ve engelsiz bir world için mücadelemiz sürüyor.</p>
             <div className="flex items-center gap-4 text-[#ffc107]">
               <Medal className="w-8 h-8" />
               <span className="font-black text-sm uppercase tracking-widest">Nobel Barış Ödülü Adayı</span>
