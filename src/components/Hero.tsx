@@ -10,10 +10,10 @@ export function Hero() {
   const heroImage = "https://picsum.photos/seed/serkan-bayram-tbmm/800/450";
 
   return (
-    <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
+    <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border text-left">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4 -z-10" />
       <div className="container px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 text-left">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="lg:w-3/4 space-y-6">
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" />
