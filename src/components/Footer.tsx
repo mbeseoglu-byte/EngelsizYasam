@@ -17,7 +17,7 @@ export function Footer() {
     { Icon: Twitter, href: "https://x.com/AvSerkanBayram" },
     { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/" },
     { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935" },
-    { Icon: NetflixIcon, href: "https://www.netflix.com/tr/title/81676907", customColor: "text-[#E50914]" }
+    { Icon: NetflixIcon, href: "https://www.netflix.com/tr/title/81676907", isNetflix: true }
   ];
 
   return (
@@ -45,9 +45,12 @@ export function Footer() {
                   href={social.href} 
                   target={social.href.startsWith('http') ? "_blank" : undefined}
                   rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-[#ffc107] hover:text-[#0a192f] transition-all hover:-translate-y-1"
+                  className={cn(
+                    "w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center transition-all hover:-translate-y-1",
+                    social.isNetflix ? "hover:bg-red-600/10" : "hover:bg-[#ffc107] hover:text-[#0a192f]"
+                  )}
                 >
-                  <social.Icon className={cn("w-6 h-6", social.customColor || "text-white")} />
+                  <social.Icon className={cn("w-6 h-6", social.isNetflix ? "text-[#E50914]" : "text-white")} />
                 </Link>
               ))}
             </div>
