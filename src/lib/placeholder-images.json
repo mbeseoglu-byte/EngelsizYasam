@@ -23,6 +23,12 @@
       "description": "Küresel Etki Haritası",
       "imageUrl": "https://placehold.jp/24/1e3a8a/ffffff/800x800.png?text=Global+Advocacy",
       "imageHint": "world map"
+    },
+    {
+      "id": "disability-theme",
+      "description": "Engelliler ve Erişilebilirlik Temalı Görsel",
+      "imageUrl": "https://picsum.photos/seed/accessibility/800/1000",
+      "imageHint": "accessibility disability"
     }
   ]
 }

@@ -1,11 +1,11 @@
-
 "use client"
 
 import Image from 'next/image';
 import { Quote, Landmark, Heart, ShieldCheck } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Biography() {
-  const fallback = "https://placehold.jp/24/1e3a8a/ffffff/800x1000.png?text=Av.+Serkan+Bayram";
+  const disabilityImage = PlaceHolderImages.find(img => img.id === 'disability-theme')?.imageUrl || "https://picsum.photos/seed/disability/800/1000";
 
   return (
     <section id="biyografi" className="py-20 bg-primary text-white overflow-hidden relative">
@@ -67,11 +67,11 @@ export function Biography() {
               <div className="absolute -inset-6 border-4 border-secondary/40 rounded-[2.5rem] rotate-3" />
               <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white/10">
                 <Image 
-                  src={fallback} 
-                  alt="Av. Serkan Bayram" 
+                  src={disabilityImage} 
+                  alt="Engelli Hakları ve Erişilebilirlik" 
                   fill 
                   className="object-cover"
-                  data-ai-hint="man portrait"
+                  data-ai-hint="accessibility disability"
                 />
               </div>
             </div>
