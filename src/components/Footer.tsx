@@ -11,10 +11,16 @@ const NetflixIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298L17.61 20.644z" />
+  </svg>
+);
+
 export function Footer() {
   const socialLinks = [
     { Icon: Facebook, href: "#" },
-    { Icon: Twitter, href: "https://x.com/AvSerkanBayram" },
+    { Icon: XIcon, href: "https://x.com/AvSerkanBayram", isX: true },
     { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/" },
     { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935", isYoutube: true },
     { Icon: NetflixIcon, href: "https://www.netflix.com/tr/title/81676907", isNetflix: true }
@@ -47,10 +53,15 @@ export function Footer() {
                   rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
                   className={cn(
                     "w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center transition-all hover:-translate-y-1",
-                    (social.isNetflix || social.isYoutube) ? "hover:bg-red-600/10" : "hover:bg-[#ffc107] hover:text-[#0a192f]"
+                    (social.isNetflix || social.isYoutube) ? "hover:bg-red-600/10" : 
+                    social.isX ? "hover:bg-blue-600/10" : "hover:bg-[#ffc107] hover:text-[#0a192f]"
                   )}
                 >
-                  <social.Icon className={cn("w-6 h-6", (social.isNetflix || social.isYoutube) ? "text-[#FF0000]" : "text-white")} />
+                  <social.Icon className={cn(
+                    "w-6 h-6", 
+                    (social.isNetflix || social.isYoutube) ? "text-[#FF0000]" : 
+                    social.isX ? "text-[#1DA1F2]" : "text-white"
+                  )} />
                 </Link>
               ))}
             </div>
