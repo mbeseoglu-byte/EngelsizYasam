@@ -20,7 +20,7 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function Footer() {
   const socialLinks = [
     { Icon: XIcon, href: "https://x.com/AvSerkanBayram", isX: true },
-    { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/" },
+    { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/", isInstagram: true },
     { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935", isYoutube: true },
     { Icon: NetflixIcon, href: "https://www.netflix.com/tr/title/81676907", isNetflix: true }
   ];
@@ -53,13 +53,15 @@ export function Footer() {
                   className={cn(
                     "w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center transition-all hover:-translate-y-1",
                     (social.isNetflix || social.isYoutube) ? "hover:bg-red-600/10" : 
-                    social.isX ? "hover:bg-blue-600/10" : "hover:bg-[#ffc107] hover:text-[#0a192f]"
+                    social.isX ? "hover:bg-blue-600/10" : 
+                    social.isInstagram ? "hover:bg-pink-600/10" : "hover:bg-[#ffc107] hover:text-[#0a192f]"
                   )}
                 >
                   <social.Icon className={cn(
                     "w-6 h-6", 
                     (social.isNetflix || social.isYoutube) ? "text-[#FF0000]" : 
-                    social.isX ? "text-[#1DA1F2]" : "text-white"
+                    social.isX ? "text-[#1DA1F2]" : 
+                    social.isInstagram ? "text-[#E1306C]" : "text-white"
                   )} />
                 </Link>
               ))}
