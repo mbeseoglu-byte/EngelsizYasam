@@ -48,8 +48,8 @@ export function Footer() {
                 <Link 
                   key={i} 
                   href={social.href} 
-                  target={social.href.startsWith('http') ? "_blank" : undefined}
-                  rel={social.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
                     "w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center transition-all hover:-translate-y-1",
                     (social.isNetflix || social.isYoutube) ? "hover:bg-red-600/10" : 
@@ -81,7 +81,7 @@ export function Footer() {
 
           <div className="space-y-8">
             <h4 className="font-black text-2xl text-[#ffc107] uppercase tracking-widest">Vizyon 2030</h4>
-            <p className="text-white/60 font-medium">Tam erişilebilir ve engelsiz bir world için mücadelemiz sürüyor.</p>
+            <p className="text-white/60 font-medium">Tam erişilebilir ve engelsiz bir dünya için mücadelemiz sürüyor.</p>
             <div className="flex items-center gap-4 text-[#ffc107]">
               <Medal className="w-8 h-8" />
               <span className="font-black text-sm uppercase tracking-widest">Nobel Barış Ödülü Adayı</span>
