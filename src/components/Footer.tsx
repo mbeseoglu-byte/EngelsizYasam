@@ -6,7 +6,7 @@ import { Accessibility, Facebook, Twitter, Instagram, Youtube, Mail, Heart, Meda
 export function Footer() {
   const socialLinks = [
     { Icon: Facebook, href: "#" },
-    { Icon: Twitter, href: "#" },
+    { Icon: Twitter, href: "https://x.com/AvSerkanBayram" },
     { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/" },
     { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935" }
   ];
