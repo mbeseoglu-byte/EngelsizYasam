@@ -1,14 +1,13 @@
 
 "use client"
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
-  // Av. Serkan Bayram'ın vizyonunu temsil eden daha profesyonel ve vakarlı bir görsel seed'i
-  const heroImage = "https://picsum.photos/seed/serkan-bayram-portrait/800/1000";
+  // Av. Serkan Bayram resmi profil fotoğrafı
+  const profileImage = "https://pbs.twimg.com/profile_images/1514330669041209352/0S6S_H-V_400x400.jpg";
 
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border text-left">
@@ -44,16 +43,13 @@ export function Hero() {
           </div>
           
           <div className="lg:w-1/3 w-full flex justify-start lg:justify-end">
-            <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white bg-muted rotate-2 hover:rotate-0 transition-transform duration-500">
-              <Image 
-                src={heroImage} 
-                alt="Av. Serkan Bayram"
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint="portrait of a professional statesman"
+            <div className="relative group">
+              <img 
+                src={profileImage} 
+                alt="Serkan Bayram" 
+                className="rounded-2xl shadow-2xl border-4 border-secondary w-full max-w-[280px] aspect-square object-cover transition-transform duration-500 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              <div className="absolute -inset-2 border border-secondary/20 rounded-[1.5rem] -z-10 scale-105 group-hover:scale-110 transition-transform duration-500" />
             </div>
           </div>
         </div>
