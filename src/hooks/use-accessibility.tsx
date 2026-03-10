@@ -3,16 +3,14 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-export type FontSize = 'normal' | 'large' | 'xlarge';
-
 export function useAccessibility() {
-  const [fontSize, setFontSize] = useState<FontSize>('normal');
+  const [fontScale, setFontScale] = useState(100);
   const [highContrast, setHighContrast] = useState(false);
   const [dyslexicFont, setDyslexicFont] = useState(false);
   const [readingMode, setReadingMode] = useState(false);
 
   const reset = useCallback(() => {
-    setFontSize('normal');
+    setFontScale(100);
     setHighContrast(false);
     setDyslexicFont(false);
     setReadingMode(false);
@@ -21,36 +19,36 @@ export function useAccessibility() {
   useEffect(() => {
     const root = document.documentElement;
 
-    // Apply font size class to html element for global scaling via rem
-    root.classList.remove('font-large', 'font-xlarge');
-    if (fontSize === 'large') root.classList.add('font-large');
-    if (fontSize === 'xlarge') root.classList.add('font-xlarge');
+    // Font Ölçeklendirme Motoru: 100% - 150% arası dinamik değişim
+    root.style.fontSize = `${fontScale}%`;
 
-    // Apply high contrast
+    // Kontrast Motoru: Grayscale ve Contrast filtreleri uygulaması
     if (highContrast) {
-      root.classList.add('high-contrast');
+      root.style.filter = 'grayscale(1) contrast(200%)';
+      root.classList.add('high-contrast-mode');
     } else {
-      root.classList.remove('high-contrast');
+      root.style.filter = 'none';
+      root.classList.remove('high-contrast-mode');
     }
 
-    // Apply dyslexic font
+    // Font Tipi
     if (dyslexicFont) {
       root.classList.add('dyslexic-font');
     } else {
       root.classList.remove('dyslexic-font');
     }
 
-    // Apply reading mode (hide images)
+    // Okuma Modu
     if (readingMode) {
       root.classList.add('reading-mode');
     } else {
       root.classList.remove('reading-mode');
     }
-  }, [fontSize, highContrast, dyslexicFont, readingMode]);
+  }, [fontScale, highContrast, dyslexicFont, readingMode]);
 
   return {
-    fontSize,
-    setFontSize,
+    fontScale,
+    setFontScale,
     highContrast,
     setHighContrast,
     dyslexicFont,

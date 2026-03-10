@@ -25,59 +25,32 @@
     --input: 221 20% 90%;
     --ring: 221 65% 33%;
     --radius: 1.25rem;
-    --nobel-gold: 45 100% 50%;
   }
 
-  /* Global Scaling */
+  /* Erişilebilirlik Motoru Temelleri */
   html {
-    font-size: 16px;
-    transition: font-size 0.2s ease;
+    transition: font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+    scroll-behavior: smooth;
   }
 
-  html.font-large {
-    font-size: 20px;
-  }
-
-  html.font-xlarge {
-    font-size: 24px;
-  }
-
-  .high-contrast {
-    --background: 0 0% 0%;
-    --foreground: 60 100% 50%;
-    --card: 0 0% 0%;
-    --card-foreground: 60 100% 50%;
-    --primary: 60 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
-    --border: 60 100% 50%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 60 100% 70%;
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 0%;
-    --ring: 60 100% 50%;
-  }
-
+  /* Disleksi Fontu */
   .dyslexic-font {
-    font-family: 'OpenDyslexic', sans-serif !important;
+    font-family: 'OpenDyslexic', 'Inter', sans-serif !important;
   }
 
-  /* Reading Mode: Hide non-essential visuals */
+  /* Okuma Modu Stilleri */
   .reading-mode img,
   .reading-mode video,
   .reading-mode iframe,
-  .reading-mode [style*="background-image"] {
-    display: none !important;
-  }
-  
-  .reading-mode .MovieSection_video_container,
+  .reading-mode [style*="background-image"],
   .reading-mode .aspect-video,
   .reading-mode .aspect-square {
-    background: hsl(var(--muted)) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none !important;
+  }
+
+  .reading-mode section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 
