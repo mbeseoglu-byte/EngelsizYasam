@@ -21,8 +21,9 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-[100] bg-white/95 backdrop-blur-xl border-b border-border">
       <div className="container px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
+        <div className="flex items-center h-20">
+          {/* Logo - Left side */}
+          <Link href="/" className="flex items-center gap-3 group shrink-0 mr-8">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 shadow-lg shadow-primary/30">
               <Accessibility className="w-6 h-6" />
             </div>
@@ -32,8 +33,8 @@ export function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6 ml-12">
+          {/* Desktop Nav - Centered */}
+          <div className="hidden lg:flex flex-1 justify-center items-center gap-8">
             {navItems.map((item) => (
               <Link 
                 key={item.label} 
@@ -43,6 +44,10 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
+          </div>
+
+          {/* Action Button - Right side */}
+          <div className="hidden lg:block ml-8">
             <Button asChild variant="default" className="bg-primary hover:bg-secondary text-white px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all shadow-md shadow-primary/20">
               <Link href="#iletisim" className="flex items-center gap-2">
                 Dijital Sekreterya
@@ -53,7 +58,7 @@ export function Navbar() {
 
           {/* Mobile Toggle */}
           <button 
-            className="lg:hidden p-2 bg-muted rounded-lg text-primary"
+            className="lg:hidden ml-auto p-2 bg-muted rounded-lg text-primary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
