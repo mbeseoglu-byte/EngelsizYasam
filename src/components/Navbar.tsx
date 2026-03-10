@@ -27,7 +27,7 @@ export function Navbar() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 shadow-lg shadow-primary/30">
               <Accessibility className="w-6 h-6" />
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center lg:items-start">
               <span className="font-headline font-black text-base text-primary leading-tight tracking-tight">Av. Serkan Bayram</span>
               <span className="text-[8px] uppercase tracking-[0.2em] text-secondary font-black mt-1">Engelsiz ve Erişilebilir Dünya</span>
             </div>
@@ -39,7 +39,7 @@ export function Navbar() {
               <Link 
                 key={item.label} 
                 href={item.href}
-                className="text-[10px] font-black text-foreground/80 hover:text-primary transition-colors py-2 uppercase tracking-[0.1em] relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full"
+                className="text-[10px] font-black text-foreground/80 hover:text-primary transition-colors py-2 uppercase tracking-[0.1em] relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full"
               >
                 {item.label}
               </Link>
@@ -76,7 +76,7 @@ export function Navbar() {
             <Link 
               key={item.label} 
               href={item.href}
-              className="text-base font-black text-primary border-b border-border/50 pb-2 uppercase tracking-widest"
+              className="text-base font-black text-primary border-b border-border/50 pb-2 uppercase tracking-widest text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
