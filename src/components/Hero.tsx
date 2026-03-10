@@ -4,10 +4,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, ShieldCheck, Accessibility } from 'lucide-react';
+import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
-  // Kullanıcının sağladığı TBMM temalı görseli temsil eden placeholder
   const heroImage = "https://picsum.photos/seed/serkan-bayram-tbmm/800/450";
 
   return (
@@ -53,13 +52,6 @@ export function Hero() {
                 priority
                 data-ai-hint="professional statesman press conference"
               />
-            </div>
-            <div className="absolute -bottom-3 -left-3 bg-white p-3 rounded-xl shadow-xl border border-primary/10 hidden lg:block">
-              <div className="text-[9px] font-black text-primary uppercase tracking-widest flex items-center gap-2">
-                <Accessibility className="w-3 h-3 text-secondary" />
-                Milletvekili
-              </div>
-              <div className="text-[10px] font-bold text-secondary">Av. Serkan Bayram</div>
             </div>
           </div>
         </div>
