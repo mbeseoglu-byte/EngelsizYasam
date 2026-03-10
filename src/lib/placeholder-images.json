@@ -27,8 +27,8 @@
     {
       "id": "disability-theme",
       "description": "Engelliler ve Erişilebilirlik Temalı Görsel",
-      "imageUrl": "https://picsum.photos/seed/accessibility/800/1000",
-      "imageHint": "accessibility disability"
+      "imageUrl": "https://picsum.photos/seed/disability-inclusion/800/1000",
+      "imageHint": "inclusion wheelchair"
     }
   ]
 }

@@ -6,7 +6,7 @@ import { Quote, Landmark, Heart, ShieldCheck } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Biography() {
-  const disabilityImage = PlaceHolderImages.find(img => img.id === 'disability-theme')?.imageUrl || "https://picsum.photos/seed/accessibility/800/1000";
+  const disabilityImage = PlaceHolderImages.find(img => img.id === 'disability-theme')?.imageUrl || "https://picsum.photos/seed/disability-inclusion/800/1000";
 
   return (
     <section id="biyografi" className="py-20 bg-primary text-white overflow-hidden relative">
@@ -73,7 +73,7 @@ export function Biography() {
                   width={800}
                   height={1000}
                   className="object-cover"
-                  data-ai-hint="accessibility disability"
+                  data-ai-hint="inclusion wheelchair"
                 />
               </div>
             </div>
