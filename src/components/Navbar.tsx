@@ -39,7 +39,7 @@ export function Navbar() {
               <Link 
                 key={item.label} 
                 href={item.href}
-                className="text-[10px] font-black text-foreground/80 hover:text-primary transition-colors py-2 uppercase tracking-[0.1em] relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full"
+                className="text-[10px] font-black text-foreground/80 hover:text-primary transition-colors py-2 uppercase tracking-[0.1em] relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-secondary after:transition-all hover:after:w-full whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -76,7 +76,7 @@ export function Navbar() {
             <Link 
               key={item.label} 
               href={item.href}
-              className="text-base font-black text-primary border-b border-border/50 pb-2 uppercase tracking-widest text-center"
+              className="text-base font-black text-primary border-b border-border/50 pb-2 uppercase tracking-widest text-center whitespace-nowrap"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
