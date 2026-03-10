@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
-  // Serkan Bayram'ın profesyonel devlet adamı portresi
+  // Serkan Bayram'ın profesyonel devlet adamı portresi için placeholder
   const heroImage = "https://picsum.photos/seed/serkan-bayram-statesman/600/800";
 
   return (

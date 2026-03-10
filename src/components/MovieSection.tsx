@@ -44,7 +44,7 @@ export function MovieSection() {
 
             <div className="space-y-4 text-base text-white/90 leading-relaxed font-medium max-w-2xl">
               <p className="text-sm">
-                Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü. Milyonlara umut olan bu hikaye, engellerin zihinlerde olduğunu kanıtlıyor.
+                Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü. Milyonlara umut olan bu hikaye, engelleri zihinlerde olduğunu kanıtlıyor.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                 <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
