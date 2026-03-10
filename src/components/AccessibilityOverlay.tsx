@@ -5,35 +5,43 @@ import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { 
   Accessibility, 
-  Type, 
   Contrast, 
   BookOpen, 
   X,
   ChevronLeft,
-  ChevronRight,
   EyeOff,
   RotateCcw,
   Plus,
   Minus
 } from 'lucide-react';
-import { useAccessibility } from '@/hooks/use-accessibility';
 import { cn } from '@/lib/utils';
 
-export function AccessibilityOverlay() {
-  const [isOpen, setIsOpen] = useState(false);
-  const { 
-    fontScale, setFontScale, 
-    highContrast, setHighContrast, 
-    dyslexicFont, setDyslexicFont,
-    readingMode, setReadingMode,
-    reset
-  } = useAccessibility();
+interface AccessibilityOverlayProps {
+  fontSize: number;
+  setFontSize: (val: number | ((prev: number) => number)) => void;
+  isHighContrast: boolean;
+  setIsHighContrast: (val: boolean) => void;
+  isDyslexic: boolean;
+  setIsDyslexic: (val: boolean) => void;
+  isReadingMode: boolean;
+  setIsReadingMode: (val: boolean) => void;
+  reset: () => void;
+}
 
-  const increaseFont = () => setFontScale(prev => Math.min(prev + 10, 150));
-  const decreaseFont = () => setFontScale(prev => Math.max(prev - 10, 100));
+export function AccessibilityOverlay({
+  fontSize, setFontSize,
+  isHighContrast, setIsHighContrast,
+  isDyslexic, setIsDyslexic,
+  isReadingMode, setIsReadingMode,
+  reset
+}: AccessibilityOverlayProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const increaseFont = () => setFontSize(prev => Math.min(prev + 10, 150));
+  const decreaseFont = () => setFontSize(prev => Math.max(prev - 10, 100));
 
   return (
-    <div className="fixed left-0 bottom-8 z-[110] flex items-end transition-transform duration-300">
+    <div className="fixed left-0 bottom-8 z-[110] flex items-end">
       <div 
         className={cn(
           "bg-white border-r border-y border-border shadow-2xl rounded-r-3xl p-6 w-80 transition-all duration-300 ease-in-out",
@@ -54,23 +62,23 @@ export function AccessibilityOverlay() {
           <section>
             <div className="flex justify-between items-center mb-4">
               <label className="text-[10px] font-black text-muted-foreground uppercase tracking-widest">
-                Yazı Boyutu (%{fontScale})
+                Yazı Boyutu (%{fontSize})
               </label>
               <div className="flex gap-2">
-                <Button variant="outline" size="icon" onClick={decreaseFont} disabled={fontScale <= 100} className="h-8 w-8">
+                <Button variant="outline" size="icon" onClick={decreaseFont} disabled={fontSize <= 100} className="h-8 w-8">
                   <Minus className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="icon" onClick={increaseFont} disabled={fontScale >= 150} className="h-8 w-8">
+                <Button variant="outline" size="icon" onClick={increaseFont} disabled={fontSize >= 150} className="h-8 w-8">
                   <Plus className="w-4 h-4" />
                 </Button>
               </div>
             </div>
             <Slider 
-              value={[fontScale]} 
+              value={[fontSize]} 
               min={100} 
               max={150} 
               step={10} 
-              onValueChange={(val) => setFontScale(val[0])}
+              onValueChange={(val) => setFontSize(val[0])}
               className="mt-4"
             />
           </section>
@@ -80,34 +88,34 @@ export function AccessibilityOverlay() {
               Görünüm Ayarları
             </label>
             <Button 
-              variant={highContrast ? 'default' : 'outline'} 
+              variant={isHighContrast ? 'default' : 'outline'} 
               className={cn(
                 "w-full justify-start gap-3 h-12 text-xs font-bold rounded-xl transition-all",
-                highContrast && "bg-secondary text-white border-secondary"
+                isHighContrast && "bg-secondary text-white border-secondary"
               )}
-              onClick={() => setHighContrast(!highContrast)}
+              onClick={() => setIsHighContrast(!isHighContrast)}
             >
               <Contrast className="w-4 h-4" />
               Yüksek Kontrast (Filtre)
             </Button>
             <Button 
-              variant={dyslexicFont ? 'default' : 'outline'} 
+              variant={isDyslexic ? 'default' : 'outline'} 
               className={cn(
                 "w-full justify-start gap-3 h-12 text-xs font-bold rounded-xl transition-all",
-                dyslexicFont && "bg-secondary text-white border-secondary"
+                isDyslexic && "bg-secondary text-white border-secondary"
               )}
-              onClick={() => setDyslexicFont(!dyslexicFont)}
+              onClick={() => setIsDyslexic(!isDyslexic)}
             >
               <BookOpen className="w-4 h-4" />
               Disleksi Dostu Mod
             </Button>
             <Button 
-              variant={readingMode ? 'default' : 'outline'} 
+              variant={isReadingMode ? 'default' : 'outline'} 
               className={cn(
                 "w-full justify-start gap-3 h-12 text-xs font-bold rounded-xl transition-all",
-                readingMode && "bg-secondary text-white border-secondary"
+                isReadingMode && "bg-secondary text-white border-secondary"
               )}
-              onClick={() => setReadingMode(!readingMode)}
+              onClick={() => setIsReadingMode(!isReadingMode)}
             >
               <EyeOff className="w-4 h-4" />
               Görselleri Gizle

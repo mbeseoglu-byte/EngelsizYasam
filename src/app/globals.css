@@ -28,7 +28,7 @@
 
   /* Erişilebilirlik Motoru Temelleri */
   html {
-    transition: font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+    transition: font-size 0.2s ease-out, filter 0.3s ease;
     scroll-behavior: smooth;
   }
 
@@ -46,12 +46,12 @@
     background-image: none !important;
   }
 
-  /* Global Disleksi Düzenlemeleri */
+  /* Global Disleksi Düzenlemeleri - İstek üzerine güncellendi */
   .dyslexic-font * {
     text-align: left !important;
-    line-height: 1.8 !important;
-    letter-spacing: 0.05em !important;
-    word-spacing: 0.1em !important;
+    line-height: 2 !important; /* İstek: 2 */
+    letter-spacing: 0.15em !important; /* İstek: 0.15em */
+    word-spacing: 0.2em !important;
   }
 
   /* Okuma Modu Stilleri */
