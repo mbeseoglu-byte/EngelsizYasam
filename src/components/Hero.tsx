@@ -4,23 +4,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Award, ShieldCheck, Accessibility } from 'lucide-react';
 
 export function Hero() {
-  // Serkan Bayram'ın profesyonel devlet adamı portresi için placeholder
-  const heroImage = "https://picsum.photos/seed/serkan-bayram-statesman/600/800";
+  // Kullanıcının sağladığı TBMM temalı görseli temsil eden placeholder
+  const heroImage = "https://picsum.photos/seed/serkan-bayram-tbmm/800/450";
 
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4 -z-10" />
       <div className="container px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 text-left">
-          <div className="lg:w-2/3 space-y-6">
+          <div className="lg:w-3/4 space-y-6">
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
               <Award className="w-3.5 h-3.5" />
               Engelsiz ve Erişilebilir Bir Dünya
             </div>
-            <h1 className="text-2xl lg:text-3xl font-headline font-black text-primary leading-tight tracking-tight">
+            <h1 className="text-2xl lg:text-4xl font-headline font-black text-primary leading-tight tracking-tight">
               Yere düştüğünde değil, <br />
               <span className="text-secondary italic">vazgeçtiğinde</span> kaybedersin.
             </h1>
@@ -43,19 +43,22 @@ export function Hero() {
             </div>
           </div>
           
-          <div className="lg:w-1/5 w-full max-w-[160px] lg:max-w-[200px] relative ml-0 lg:ml-auto">
-            <div className="relative aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
+          <div className="lg:w-1/4 w-full max-w-[280px] relative ml-0 lg:ml-auto">
+            <div className="relative aspect-[16/10] rounded-[1.5rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
               <Image 
                 src={heroImage} 
-                alt="Av. Serkan Bayram"
+                alt="Milletvekili Av. Serkan Bayram"
                 fill
                 className="object-cover"
                 priority
-                data-ai-hint="professional statesman portrait"
+                data-ai-hint="professional statesman press conference"
               />
             </div>
             <div className="absolute -bottom-3 -left-3 bg-white p-3 rounded-xl shadow-xl border border-primary/10 hidden lg:block">
-              <div className="text-[9px] font-black text-primary uppercase tracking-widest">Milletvekili</div>
+              <div className="text-[9px] font-black text-primary uppercase tracking-widest flex items-center gap-2">
+                <Accessibility className="w-3 h-3 text-secondary" />
+                Milletvekili
+              </div>
               <div className="text-[10px] font-bold text-secondary">Av. Serkan Bayram</div>
             </div>
           </div>
