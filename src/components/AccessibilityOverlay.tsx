@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState } from 'react';
@@ -100,7 +99,7 @@ export function AccessibilityOverlay() {
               onClick={() => setDyslexicFont(!dyslexicFont)}
             >
               <BookOpen className="w-4 h-4" />
-              Disleksi Dostu Yazı
+              Disleksi Dostu Mod
             </Button>
             <Button 
               variant={readingMode ? 'default' : 'outline'} 

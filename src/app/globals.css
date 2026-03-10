@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,9 +32,26 @@
     scroll-behavior: smooth;
   }
 
-  /* Disleksi Fontu */
+  /* Disleksi Dostu Mod Stilleri */
   .dyslexic-font {
     font-family: 'OpenDyslexic', 'Inter', sans-serif !important;
+    background-color: #fff9ed !important; /* Göz yormayan krem tonu */
+  }
+
+  .dyslexic-font body,
+  .dyslexic-font main,
+  .dyslexic-font section,
+  .dyslexic-font div:not([class*="bg-primary"]):not([class*="bg-secondary"]) {
+    background-color: #fff9ed !important;
+    background-image: none !important;
+  }
+
+  /* Global Disleksi Düzenlemeleri */
+  .dyslexic-font * {
+    text-align: left !important;
+    line-height: 1.8 !important;
+    letter-spacing: 0.05em !important;
+    word-spacing: 0.1em !important;
   }
 
   /* Okuma Modu Stilleri */
