@@ -37,7 +37,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-headline font-black text-3xl leading-tight">Serkan Bayram</span>
-                <span className="text-[11px] uppercase tracking-[0.3em] text-[#ffc107] font-black">Engelsiz ve Erişilebilir Dünya</span>
+                <span className="text-[11px] uppercase tracking-[0.3em] text-secondary font-black">Engelsiz ve Erişilebilir Dünya</span>
               </div>
             </Link>
             <p className="text-white/60 max-w-md text-xl leading-relaxed font-medium">
@@ -54,7 +54,7 @@ export function Footer() {
                     "w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center transition-all hover:-translate-y-1",
                     (social.isNetflix || social.isYoutube) ? "hover:bg-red-600/10" : 
                     social.isX ? "hover:bg-blue-600/10" : 
-                    social.isInstagram ? "hover:bg-pink-600/10" : "hover:bg-[#ffc107] hover:text-[#0a192f]"
+                    social.isInstagram ? "hover:bg-pink-600/10" : "hover:bg-secondary hover:text-[#0a192f]"
                   )}
                 >
                   <social.Icon className={cn(
@@ -69,7 +69,7 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-black text-2xl mb-8 text-[#ffc107] uppercase tracking-widest">Hızlı Erişim</h4>
+            <h4 className="font-black text-2xl mb-8 text-secondary uppercase tracking-widest">Hızlı Erişim</h4>
             <ul className="space-y-5 text-white/70 font-bold text-lg">
               <li><Link href="#yasa" className="hover:text-white transition-colors">Yasa Değiştirici</Link></li>
               <li><Link href="#kuresel" className="hover:text-white transition-colors">Küresel Elçi</Link></li>
@@ -80,9 +80,9 @@ export function Footer() {
           </div>
 
           <div className="space-y-8">
-            <h4 className="font-black text-2xl text-[#ffc107] uppercase tracking-widest">Vizyon 2030</h4>
+            <h4 className="font-black text-2xl text-secondary uppercase tracking-widest">Vizyon 2030</h4>
             <p className="text-white/60 font-medium">Tam erişilebilir ve engelsiz bir dünya için mücadelemiz sürüyor.</p>
-            <div className="flex items-center gap-4 text-[#ffc107]">
+            <div className="flex items-center gap-4 text-secondary">
               <Medal className="w-8 h-8" />
               <span className="font-black text-sm uppercase tracking-widest">Nobel Barış Ödülü Adayı</span>
             </div>
@@ -93,7 +93,7 @@ export function Footer() {
           <div className="text-white/40 text-sm font-bold flex items-center gap-2 text-center md:text-left">
             © {new Date().getFullYear()} Av. Serkan Bayram. Engelsiz ve Erişilebilir Dünya Platformu.
           </div>
-          <div className="flex items-center gap-2 text-[#ffc107] font-black text-sm uppercase tracking-widest">
+          <div className="flex items-center gap-2 text-secondary font-black text-sm uppercase tracking-widest">
             <Heart className="w-4 h-4 fill-current" />
             Engelleri Birlikte Aşıyoruz
           </div>
