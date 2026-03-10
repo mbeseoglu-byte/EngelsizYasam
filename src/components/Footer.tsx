@@ -3,12 +3,19 @@
 import Link from 'next/link';
 import { Accessibility, Facebook, Twitter, Instagram, Youtube, Mail, Heart, Medal } from 'lucide-react';
 
+const NetflixIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M4.64 0V24C5.88 23.31 7.15 22.51 8.35 21.6V0H4.64ZM15.65 0V21.6C16.85 22.51 18.12 23.31 19.36 24V0H15.65ZM8.35 0L15.65 21.6V24C14.41 23.31 13.14 22.51 11.94 21.6L4.64 0H8.35Z" />
+  </svg>
+);
+
 export function Footer() {
   const socialLinks = [
     { Icon: Facebook, href: "#" },
     { Icon: Twitter, href: "https://x.com/AvSerkanBayram" },
     { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/" },
-    { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935" }
+    { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935" },
+    { Icon: NetflixIcon, href: "https://www.netflix.com/tr/title/81676907" }
   ];
 
   return (
