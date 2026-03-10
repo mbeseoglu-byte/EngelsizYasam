@@ -7,7 +7,7 @@ import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
 
 export function Hero() {
   // Av. Serkan Bayram resmi profil fotoğrafı
-  const profileImage = "https://pbs.twimg.com/profile_images/1514330669041209352/0S6S_H-V_400x400.jpg";
+  const profileImage = "https://media-cdn.t24.com.tr/media/library/2019/05/1558475293655-untitled-1.jpg";
 
   return (
     <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border text-left">
@@ -44,12 +44,14 @@ export function Hero() {
           
           <div className="lg:w-1/3 w-full flex justify-start lg:justify-end">
             <div className="relative group">
-              <img 
-                src={profileImage} 
-                alt="Serkan Bayram" 
-                className="rounded-2xl shadow-2xl border-4 border-secondary w-full max-w-[280px] aspect-square object-cover transition-transform duration-500 group-hover:scale-105" 
-              />
               <div className="absolute -inset-2 border border-secondary/20 rounded-[1.5rem] -z-10 scale-105 group-hover:scale-110 transition-transform duration-500" />
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl border-4 border-secondary bg-white">
+                <img 
+                  src={profileImage} 
+                  alt="Av. Serkan Bayram" 
+                  className="w-full max-w-[280px] aspect-square object-cover transition-transform duration-500 group-hover:scale-105" 
+                />
+              </div>
             </div>
           </div>
         </div>
