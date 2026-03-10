@@ -48,7 +48,7 @@ export function Navbar() {
 
           {/* Action Button - Right side */}
           <div className="hidden lg:block ml-8">
-            <Button asChild variant="default" className="bg-primary hover:bg-white hover:text-secondary text-white px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all shadow-md shadow-black/10">
+            <Button asChild variant="default" className="bg-primary hover:bg-white hover:text-secondary text-secondary px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all shadow-md shadow-black/10">
               <Link href="#iletisim" className="flex items-center gap-2">
                 Dijital Sekreterya
                 <Accessibility className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Button asChild className="w-full bg-primary py-6 text-lg font-black uppercase tracking-widest rounded-xl text-white">
+          <Button asChild className="w-full bg-primary py-6 text-lg font-black uppercase tracking-widest rounded-xl text-secondary">
             <Link href="#iletisim" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
               Dijital Sekreterya
               <Accessibility className="w-5 h-5" />
