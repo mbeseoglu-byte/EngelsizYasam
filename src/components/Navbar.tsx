@@ -27,7 +27,7 @@ export function Navbar() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white transition-all duration-500 group-hover:scale-110 shadow-lg shadow-primary/30">
               <Accessibility className="w-6 h-6" />
             </div>
-            <div className="flex flex-col items-center lg:items-start">
+            <div className="flex flex-col items-start">
               <span className="font-headline font-black text-base text-primary leading-tight tracking-tight">Av. Serkan Bayram</span>
               <span className="text-[8px] uppercase tracking-[0.2em] text-secondary font-black mt-1">Engelsiz ve Erişilebilir Dünya</span>
             </div>
@@ -48,7 +48,7 @@ export function Navbar() {
 
           {/* Action Button - Right side */}
           <div className="hidden lg:block ml-8">
-            <Button asChild variant="default" className="bg-primary hover:bg-secondary text-white px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all shadow-md shadow-primary/20">
+            <Button asChild variant="default" className="bg-primary hover:bg-secondary text-secondary px-6 h-10 rounded-full font-black uppercase tracking-[0.1em] text-[10px] transition-all shadow-md shadow-primary/20">
               <Link href="#iletisim" className="flex items-center gap-2">
                 Dijital Sekreterya
                 <Accessibility className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Button asChild className="w-full bg-primary py-6 text-lg font-black uppercase tracking-widest rounded-xl">
+          <Button asChild className="w-full bg-primary py-6 text-lg font-black uppercase tracking-widest rounded-xl text-secondary">
             <Link href="#iletisim" className="flex items-center gap-2" onClick={() => setIsMenuOpen(false)}>
               Dijital Sekreterya
               <Accessibility className="w-5 h-5" />
