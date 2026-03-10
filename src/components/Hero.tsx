@@ -43,13 +43,13 @@ export function Hero() {
           </div>
           
           <div className="lg:w-1/3 w-full flex justify-start lg:justify-end">
-            <div className="relative group">
+            <div className="relative group w-full max-w-md">
               <div className="absolute -inset-2 border border-secondary/20 rounded-[1.5rem] -z-10 scale-105 group-hover:scale-110 transition-transform duration-500" />
               <div className="relative overflow-hidden rounded-2xl shadow-2xl border-4 border-secondary bg-white">
                 <img 
                   src={profileImage} 
                   alt="Av. Serkan Bayram" 
-                  className="w-full max-w-[280px] aspect-square object-cover transition-transform duration-500 group-hover:scale-105" 
+                  className="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-105" 
                 />
               </div>
             </div>
