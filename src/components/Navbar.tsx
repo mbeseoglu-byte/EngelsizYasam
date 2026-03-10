@@ -28,7 +28,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-headline font-black text-base text-primary leading-tight tracking-tight">Av. Serkan Bayram</span>
-              <span className="text-[8px] uppercase tracking-[0.2em] text-secondary font-black">Engelsiz ve Erişilebilir Dünya</span>
+              <span className="text-[8px] uppercase tracking-[0.2em] text-secondary font-black mt-1">Engelsiz ve Erişilebilir Dünya</span>
             </div>
           </Link>
 
