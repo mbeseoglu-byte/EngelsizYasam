@@ -10,14 +10,22 @@ import {
   BookOpen, 
   X,
   ChevronRight,
-  ChevronLeft
+  ChevronLeft,
+  EyeOff,
+  RotateCcw
 } from 'lucide-react';
 import { useAccessibility } from '@/hooks/use-accessibility';
 import { cn } from '@/lib/utils';
 
 export function AccessibilityOverlay() {
   const [isOpen, setIsOpen] = useState(false);
-  const { fontSize, setFontSize, highContrast, setHighContrast, dyslexicFont, setDyslexicFont } = useAccessibility();
+  const { 
+    fontSize, setFontSize, 
+    highContrast, setHighContrast, 
+    dyslexicFont, setDyslexicFont,
+    readingMode, setReadingMode,
+    reset
+  } = useAccessibility();
 
   return (
     <div className="fixed left-0 bottom-8 z-[110] flex items-end transition-transform duration-300">
@@ -30,7 +38,7 @@ export function AccessibilityOverlay() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-base font-bold text-primary flex items-center gap-2">
             <Accessibility className="w-4 h-4" />
-            Erişilebilirlik
+            Erişilebilirlik Paneli
           </h2>
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} aria-label="Kapat" className="h-8 w-8">
             <X className="w-4 h-4" />
@@ -70,9 +78,9 @@ export function AccessibilityOverlay() {
             </div>
           </section>
 
-          <section>
-            <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
-              Görünüm
+          <section className="space-y-2">
+            <label className="text-[10px] font-semibold mb-1 block text-muted-foreground uppercase tracking-wider">
+              Görünüm Ayarları
             </label>
             <Button 
               variant={highContrast ? 'default' : 'outline'} 
@@ -82,12 +90,6 @@ export function AccessibilityOverlay() {
               <Contrast className="w-3.5 h-3.5" />
               Yüksek Kontrast
             </Button>
-          </section>
-
-          <section>
-            <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
-              Okuma Modu
-            </label>
             <Button 
               variant={dyslexicFont ? 'default' : 'outline'} 
               className="w-full justify-start gap-3 h-10 text-xs"
@@ -97,6 +99,31 @@ export function AccessibilityOverlay() {
               Disleksi Dostu Font
             </Button>
           </section>
+
+          <section>
+            <label className="text-[10px] font-semibold mb-3 block text-muted-foreground uppercase tracking-wider">
+              Okuma Modu
+            </label>
+            <Button 
+              variant={readingMode ? 'default' : 'outline'} 
+              className="w-full justify-start gap-3 h-10 text-xs"
+              onClick={() => setReadingMode(!readingMode)}
+            >
+              <EyeOff className="w-3.5 h-3.5" />
+              Görselleri Gizle
+            </Button>
+          </section>
+
+          <div className="pt-4 border-t border-border">
+            <Button 
+              variant="destructive" 
+              className="w-full gap-2 h-10 text-xs font-bold"
+              onClick={reset}
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Ayarları Sıfırla
+            </Button>
+          </div>
         </div>
       </div>
 

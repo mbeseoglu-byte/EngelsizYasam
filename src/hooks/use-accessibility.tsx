@@ -1,6 +1,7 @@
+
 "use client"
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export type FontSize = 'normal' | 'large' | 'xlarge';
 
@@ -8,15 +9,22 @@ export function useAccessibility() {
   const [fontSize, setFontSize] = useState<FontSize>('normal');
   const [highContrast, setHighContrast] = useState(false);
   const [dyslexicFont, setDyslexicFont] = useState(false);
+  const [readingMode, setReadingMode] = useState(false);
+
+  const reset = useCallback(() => {
+    setFontSize('normal');
+    setHighContrast(false);
+    setDyslexicFont(false);
+    setReadingMode(false);
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
-    const body = document.body;
 
-    // Apply font size
-    body.classList.remove('font-large', 'font-xlarge');
-    if (fontSize === 'large') body.classList.add('font-large');
-    if (fontSize === 'xlarge') body.classList.add('font-xlarge');
+    // Apply font size class to html element for global scaling via rem
+    root.classList.remove('font-large', 'font-xlarge');
+    if (fontSize === 'large') root.classList.add('font-large');
+    if (fontSize === 'xlarge') root.classList.add('font-xlarge');
 
     // Apply high contrast
     if (highContrast) {
@@ -27,11 +35,18 @@ export function useAccessibility() {
 
     // Apply dyslexic font
     if (dyslexicFont) {
-      body.classList.add('dyslexic-font');
+      root.classList.add('dyslexic-font');
     } else {
-      body.classList.remove('dyslexic-font');
+      root.classList.remove('dyslexic-font');
     }
-  }, [fontSize, highContrast, dyslexicFont]);
+
+    // Apply reading mode (hide images)
+    if (readingMode) {
+      root.classList.add('reading-mode');
+    } else {
+      root.classList.remove('reading-mode');
+    }
+  }, [fontSize, highContrast, dyslexicFont, readingMode]);
 
   return {
     fontSize,
@@ -40,5 +55,8 @@ export function useAccessibility() {
     setHighContrast,
     dyslexicFont,
     setDyslexicFont,
+    readingMode,
+    setReadingMode,
+    reset
   };
 }
