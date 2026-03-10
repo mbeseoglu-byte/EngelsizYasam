@@ -2,7 +2,7 @@
 "use client"
 
 import Link from 'next/link';
-import { Accessibility, Facebook, Twitter, Instagram, Youtube, Mail, Heart, Medal } from 'lucide-react';
+import { Accessibility, Instagram, Youtube, Mail, Heart, Medal } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const NetflixIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -19,7 +19,6 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function Footer() {
   const socialLinks = [
-    { Icon: Facebook, href: "#" },
     { Icon: XIcon, href: "https://x.com/AvSerkanBayram", isX: true },
     { Icon: Instagram, href: "https://www.instagram.com/av.serkanbayram/" },
     { Icon: Youtube, href: "https://www.youtube.com/@av.serkanbayram3935", isYoutube: true },
