@@ -35,23 +35,40 @@
   /* Disleksi Dostu Mod Stilleri */
   .dyslexic-font {
     font-family: 'OpenDyslexic', 'Inter', sans-serif !important;
-    background-color: #fff9ed !important; /* Göz yormayan krem tonu */
   }
 
+  /* Disleksi Modunda Arka Plan ve Metin Rengi Zorlaması */
+  .dyslexic-font,
   .dyslexic-font body,
   .dyslexic-font main,
   .dyslexic-font section,
-  .dyslexic-font div:not([class*="bg-primary"]):not([class*="bg-secondary"]) {
-    background-color: #fff9ed !important;
+  .dyslexic-font footer,
+  .dyslexic-font nav,
+  .dyslexic-font div,
+  .dyslexic-font header {
+    background-color: #fff9ed !important; /* Göz yormayan krem tonu */
     background-image: none !important;
+    color: #1a1a1a !important; /* Tüm metinleri koyu yap */
   }
 
-  /* Global Disleksi Düzenlemeleri - İstek üzerine güncellendi */
+  /* Tüm elementler için disleksi düzenlemeleri */
   .dyslexic-font * {
     text-align: left !important;
-    line-height: 2 !important; /* İstek: 2 */
-    letter-spacing: 0.15em !important; /* İstek: 0.15em */
+    line-height: 2 !important;
+    letter-spacing: 0.15em !important;
     word-spacing: 0.2em !important;
+    color: #1a1a1a !important; /* Beyaz metinleri de koyu griye zorla */
+    border-color: rgba(26, 26, 26, 0.2) !important;
+  }
+
+  /* Butonlar için disleksi modunda görünürlük ayarı */
+  .dyslexic-font button,
+  .dyslexic-font a[class*="bg-primary"],
+  .dyslexic-font a[class*="bg-secondary"] {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    border: 2px solid #1a1a1a !important;
+    box-shadow: none !important;
   }
 
   /* Okuma Modu Stilleri */
