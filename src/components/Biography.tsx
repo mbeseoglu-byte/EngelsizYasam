@@ -6,7 +6,8 @@ import { Quote, Landmark, Heart, ShieldCheck } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Biography() {
-  const disabilityImage = PlaceHolderImages.find(img => img.id === 'disability-theme')?.imageUrl || "https://picsum.photos/seed/disability-inclusion/800/1000";
+  // Engelli temalı, profesyonel bir görsel kullanıyoruz
+  const disabilityImage = "https://picsum.photos/seed/disability-inclusion/800/800";
 
   return (
     <section id="biyografi" className="py-20 bg-primary text-white overflow-hidden relative">
@@ -63,15 +64,15 @@ export function Biography() {
             </div>
           </div>
 
-          <div className="lg:w-2/5 order-1 lg:order-2 w-full max-w-sm lg:max-w-none mx-auto lg:mx-0">
+          <div className="lg:w-2/5 order-1 lg:order-2 w-full max-w-md mx-auto lg:mx-0">
             <div className="relative">
-              <div className="absolute -inset-6 border-4 border-secondary/40 rounded-[2.5rem] rotate-3" />
-              <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white/10">
+              <div className="absolute -inset-4 border-2 border-secondary/40 rounded-[2rem] rotate-3" />
+              <div className="relative aspect-square rounded-[1.5rem] overflow-hidden shadow-2xl border-4 border-white/10">
                 <Image 
                   src={disabilityImage} 
                   alt="Engelli Hakları ve Erişilebilirlik" 
                   width={800}
-                  height={1000}
+                  height={800}
                   className="object-cover"
                   data-ai-hint="inclusion wheelchair"
                 />
