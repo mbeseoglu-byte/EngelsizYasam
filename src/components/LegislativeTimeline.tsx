@@ -27,7 +27,7 @@ export function LegislativeTimeline() {
   ];
 
   return (
-    <section id="yasa" className="py-8 bg-muted/30">
+    <section id="yasa" className="py-8 bg-muted/30 scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mb-6">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full font-black text-[10px] uppercase tracking-widest mb-4">
