@@ -5,7 +5,7 @@ import { PlayCircle, Star, Award, Quote, Users } from 'lucide-react';
 
 export function MovieSection() {
   return (
-    <section id="mucadele" className="py-8 bg-[#0a192f] text-white overflow-hidden relative">
+    <section id="mucadele" className="py-8 bg-[#0a192f] text-white overflow-hidden relative scroll-mt-16">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-1/2" />
       
       <div className="container px-4 relative z-10">
