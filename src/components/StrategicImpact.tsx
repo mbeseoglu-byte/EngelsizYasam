@@ -153,7 +153,7 @@ export function StrategicImpact({ externalImpactId, onClearExternal }: Strategic
   };
 
   return (
-    <section id="nobel" className="py-6 bg-white relative overflow-hidden scroll-mt-20">
+    <section id="nobel" className="py-6 bg-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full opacity-[0.02] pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +219,7 @@ export function StrategicImpact({ externalImpactId, onClearExternal }: Strategic
           id="kuresel"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-6 bg-gradient-to-r from-primary to-blue-900 rounded-[2rem] p-5 lg:p-6 text-white relative overflow-hidden scroll-mt-20"
+          className="mt-6 bg-gradient-to-r from-primary to-blue-900 rounded-[2rem] p-5 lg:p-6 text-white relative overflow-hidden"
         >
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
             <div className="flex flex-col lg:flex-row items-center gap-4 text-center lg:text-left">
