@@ -5,7 +5,7 @@ import { PlayCircle, Star, Award, Quote, Users } from 'lucide-react';
 
 export function MovieSection() {
   return (
-    <section id="mucadele" className="py-8 bg-[#0a192f] text-white overflow-hidden relative scroll-mt-16">
+    <section id="mucadele" className="py-6 lg:py-8 bg-[#0a192f] text-white overflow-hidden relative scroll-mt-16">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-1/2" />
       
       <div className="container px-4 relative z-10">
@@ -47,12 +47,12 @@ export function MovieSection() {
                 Av. Serkan Bayram'ın çocukluk kazasından TBMM'ye uzanan ilham verici hayat hikayesi, beyaz perdede bir direniş ve azim rehberine dönüştü. Milyonlara umut olan bu hikaye, engelleri zihinlerde olduğunu kanıtlıyor.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div className="p-4 lg:p-6 bg-white/5 rounded-2xl border border-white/10">
                   <Award className="w-6 h-6 text-secondary mb-4" />
                   <h4 className="font-black text-lg mb-2">Uluslararası Ödüller</h4>
                   <p className="text-xs text-white/60">Global film festivallerinde en iyi biyografi ödülleri ve toplumsal etki takdirnameleri.</p>
                 </div>
-                <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                <div className="p-4 lg:p-6 bg-white/5 rounded-2xl border border-white/10">
                   <Users className="w-6 h-6 text-secondary mb-4" />
                   <h4 className="font-black text-lg mb-2">Küresel Yayın</h4>
                   <p className="text-xs text-white/60">Onlarca dilde altyazı ve dublaj ile dünya vizyonunda.</p>

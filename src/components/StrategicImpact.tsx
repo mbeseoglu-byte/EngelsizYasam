@@ -190,7 +190,7 @@ export function StrategicImpact({ externalImpactId, onClearExternal }: Strategic
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05 }}
               onClick={() => setSelectedImpact(item)}
-              className="group bg-white rounded-3xl p-5 shadow-sm border border-secondary/20 hover:border-secondary/40 hover:shadow-lg transition-all cursor-pointer flex flex-col items-start"
+              className="group bg-white rounded-3xl p-4 lg:p-5 shadow-sm border border-secondary/20 hover:border-secondary/40 hover:shadow-lg transition-all cursor-pointer flex flex-col items-start"
             >
               <div className={`w-10 h-10 ${item.bg} rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                 <div className="text-primary group-hover:text-secondary transition-colors">

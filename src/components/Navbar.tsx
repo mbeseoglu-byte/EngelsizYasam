@@ -81,19 +81,19 @@ export function Navbar({ onContactClick }: NavbarProps) {
         "lg:hidden absolute top-[80px] left-0 w-full bg-secondary border-b border-black/5 shadow-2xl transition-all duration-500 ease-in-out z-[90] overflow-hidden",
         isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 pointer-events-none"
       )}>
-        <div className="container px-6 py-10 flex flex-col gap-5">
+        <div className="container px-6 py-6 flex flex-col gap-3">
           {navItems.map((item) => (
             <Link 
               key={item.label} 
               href={item.href}
-              className="text-lg font-black text-white border-b border-white/10 pb-3 uppercase tracking-widest text-center whitespace-nowrap active:text-primary transition-colors"
+              className="text-base font-black text-white border-b border-white/10 pb-3 uppercase tracking-widest text-center whitespace-nowrap active:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
             </Link>
           ))}
           <Button 
-            className="w-full bg-primary hover:bg-white hover:text-secondary py-7 text-lg font-black uppercase tracking-widest rounded-2xl text-white transition-all shadow-xl"
+            className="w-full bg-primary hover:bg-white hover:text-secondary py-5 text-base font-black uppercase tracking-widest rounded-2xl text-white transition-all shadow-xl"
             onClick={() => { onContactClick(); setIsMenuOpen(false); }}
           >
             Dijital iletişim
