@@ -2,19 +2,18 @@
 "use client"
 
 import Image from 'next/image';
-import { Quote, Landmark, Heart, ShieldCheck } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Quote, Landmark, Heart } from 'lucide-react';
 
 export function Biography() {
   // Engelli temalı, profesyonel bir görsel kullanıyoruz
   const disabilityImage = "https://picsum.photos/seed/disability-inclusion/800/800";
 
   return (
-    <section id="biyografi" className="py-20 bg-primary text-white overflow-hidden relative">
+    <div className="py-8 lg:py-12 px-4 lg:px-8 bg-primary text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/5 -skew-x-12 translate-x-1/2" />
       
-      <div className="container px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 text-left">
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 text-left">
           <div className="lg:w-3/5 space-y-6 order-2 lg:order-1">
             <div className="flex items-center gap-4">
               <div className="h-px w-12 bg-secondary" />
@@ -26,61 +25,52 @@ export function Biography() {
               <span className="text-secondary">ve Milletvekili Kimliğiyle.</span>
             </h3>
 
-            <div className="space-y-6 text-base text-white/90 leading-relaxed font-medium">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-base text-white/90 leading-relaxed font-medium">
               <div className="flex gap-4 items-start group">
                 <div className="p-3 bg-secondary/20 rounded-xl mt-1 group-hover:bg-secondary transition-colors duration-300 shrink-0">
                   <Landmark className="w-5 h-5 text-secondary group-hover:text-white" />
                 </div>
-                <p className="text-sm">
-                  Av. Serkan Bayram, İstanbul Milletvekili olarak TBMM çatısı altında engelli vatandaşlarımızın sesi olmakta ve Türkiye'nin erişilebilirlik vizyonunu yasalarla taçlandırmaktadır.
+                <p className="text-xs">
+                  Av. Serkan Bayram, İstanbul Milletvekili olarak TBMM çatısı altında engelli vatandaşlarımızın sesi olmaktadır.
                 </p>
               </div>
               <div className="flex gap-4 items-start group">
                 <div className="p-3 bg-secondary/20 rounded-xl mt-1 group-hover:bg-secondary transition-colors duration-300 shrink-0">
                   <Heart className="w-5 h-5 text-secondary group-hover:text-white" />
                 </div>
-                <p className="text-sm">
-                  Kişisel yaşam mücadelesini milyonların umuduna dönüştüren Bayram, "Buğday Tanesi" projesiyle engelli bireylerin toplumsal hayata tam katılımı için küresel bir kampanya yürütmektedir.
-                </p>
-              </div>
-              <div className="flex gap-4 items-start group">
-                <div className="p-3 bg-secondary/20 rounded-xl mt-1 group-hover:bg-secondary transition-colors duration-300 shrink-0">
-                  <ShieldCheck className="w-5 h-5 text-secondary group-hover:text-white" />
-                </div>
-                <p className="text-sm">
-                  Hukukçu kimliğiyle adaletin herkes için erişilebilir olmasını savunan Serkan Bayram, özellikle hakim ve savcı adaylığı önündeki engellerin kaldırılması gibi tarihi reformlara öncülük etmiştir.
+                <p className="text-xs">
+                  "Buğday Tanesi" projesiyle engelli bireylerin toplumsal hayata tam katılımı için çalışmaktadır.
                 </p>
               </div>
             </div>
 
-            <div className="pt-8 border-t border-white/10">
-              <div className="flex items-center gap-6">
-                <Quote className="w-12 h-12 text-secondary opacity-40" />
-                <div className="space-y-1">
-                  <div className="text-xl font-black tracking-tight">Av. Serkan Bayram</div>
-                  <div className="text-[10px] font-black text-secondary uppercase tracking-[0.25em]">İstanbul Milletvekili & Hukukçu</div>
+            <div className="pt-6 border-t border-white/10">
+              <div className="flex items-center gap-4">
+                <Quote className="w-10 h-10 text-secondary opacity-40" />
+                <div className="space-y-0.5">
+                  <div className="text-lg font-black tracking-tight">Av. Serkan Bayram</div>
+                  <div className="text-[9px] font-black text-secondary uppercase tracking-[0.25em]">Milletvekili & Hukukçu</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="lg:w-2/5 order-1 lg:order-2 w-full max-w-md mx-auto lg:mx-0">
+          <div className="lg:w-2/5 order-1 lg:order-2 w-full max-w-xs mx-auto lg:mx-0">
             <div className="relative">
               <div className="absolute -inset-4 border-2 border-secondary/40 rounded-[2rem] rotate-3" />
               <div className="relative aspect-square rounded-[1.5rem] overflow-hidden shadow-2xl border-4 border-white/10">
                 <Image 
                   src={disabilityImage} 
                   alt="Engelli Hakları ve Erişilebilirlik" 
-                  width={800}
-                  height={800}
+                  width={600}
+                  height={600}
                   className="object-cover"
-                  data-ai-hint="inclusion wheelchair"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

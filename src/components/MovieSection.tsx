@@ -5,11 +5,11 @@ import { PlayCircle, Star, Award, Quote, Users } from 'lucide-react';
 
 export function MovieSection() {
   return (
-    <section id="mucadele" className="py-20 bg-primary text-white overflow-hidden relative">
+    <section id="mucadele" className="py-8 bg-[#0a192f] text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 -skew-x-12 translate-x-1/2" />
       
       <div className="container px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16 text-left">
+        <div className="flex flex-col lg:flex-row gap-6 items-center">
           <div className="lg:w-2/5 w-full">
             <div className="relative group">
               <div className="relative aspect-video rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10 bg-black">

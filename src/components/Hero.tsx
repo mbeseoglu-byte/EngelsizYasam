@@ -3,21 +3,35 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Award, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Award, ShieldCheck, Medal } from 'lucide-react';
 
-export function Hero() {
+interface HeroProps {
+  onContactClick?: () => void;
+  onNobelClick?: () => void;
+}
+
+export function Hero({ onContactClick, onNobelClick }: HeroProps) {
   // Av. Serkan Bayram resmi profil fotoğrafı
   const profileImage = "https://media-cdn.t24.com.tr/media/library/2019/05/1558475293655-untitled-1.jpg";
 
   return (
-    <section className="relative overflow-hidden bg-white pt-12 pb-20 lg:pt-16 lg:pb-24 border-b border-border text-left">
+    <section className="relative overflow-hidden bg-white pt-6 pb-6 lg:pt-8 lg:pb-8 border-b border-border text-left">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-primary/5 -skew-x-12 -translate-x-1/4 -z-10" />
       <div className="container px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          <div className="lg:w-2/3 space-y-6">
-            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
-              <Award className="w-3.5 h-3.5" />
-              Engelsiz ve Erişilebilir Bir Dünya
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="lg:w-2/3 space-y-4">
+            <div className="flex flex-wrap gap-2">
+              <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full font-bold text-[10px] border border-secondary/20 shadow-sm uppercase tracking-wider">
+                <Award className="w-3.5 h-3.5" />
+                Engelsiz ve Erişilebilir Bir Dünya
+              </div>
+              <button 
+                onClick={onNobelClick}
+                className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full font-bold text-[10px] border border-primary/20 shadow-sm uppercase tracking-wider hover:bg-primary/20 transition-colors cursor-pointer"
+              >
+                <Medal className="w-3.5 h-3.5" />
+                Nobel Barış Ödülü Adayı (2024)
+              </button>
             </div>
             <h1 className="text-3xl lg:text-5xl font-headline font-black text-primary leading-tight tracking-tight">
               Yere düştüğünde değil, <br />
@@ -31,12 +45,6 @@ export function Hero() {
                 <Link href="#mucadele">
                   Mücadeleyi Keşfet
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary/5 font-bold h-12 px-8 rounded-full text-sm">
-                <Link href="#yasa" className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4" />
-                  Yasal Başarılar
                 </Link>
               </Button>
             </div>

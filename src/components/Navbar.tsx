@@ -7,7 +7,11 @@ import { Menu, X, Accessibility } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
-export function Navbar() {
+interface NavbarProps {
+  onContactClick: () => void;
+}
+
+export function Navbar({ onContactClick }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -21,7 +25,7 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-[100] bg-secondary border-b border-white/10 shadow-xl">
       <div className="container px-4">
-        <div className="flex items-center h-20">
+        <div className="flex items-center h-16">
           {/* Logo - Left side */}
           <Link href="/" className="flex items-center gap-3 group shrink-0 mr-8">
             <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center text-secondary transition-all duration-500 group-hover:scale-105 shadow-lg shadow-black/10">
@@ -38,7 +42,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Nav - Centered */}
-          <div className="hidden lg:flex flex-1 justify-center items-center gap-10">
+          <div className="hidden lg:flex flex-1 justify-center items-center gap-8">
             {navItems.map((item) => (
               <Link 
                 key={item.label} 
@@ -52,11 +56,13 @@ export function Navbar() {
 
           {/* Action Button - Right side */}
           <div className="hidden lg:block ml-8">
-            <Button asChild variant="default" className="bg-primary hover:bg-white hover:text-secondary text-white font-black uppercase tracking-[0.1em] text-[10px] h-11 px-8 rounded-full transition-all shadow-lg border-none">
-              <Link href="#iletisim" className="flex items-center gap-2">
-                Dijital Sekreterya
-                <Accessibility className="w-4 h-4" />
-              </Link>
+            <Button 
+              variant="default" 
+              onClick={onContactClick}
+              className="bg-primary hover:bg-white hover:text-secondary text-white font-black uppercase tracking-[0.1em] text-[10px] h-11 px-8 rounded-full transition-all shadow-lg border-none"
+            >
+              Dijital iletişim
+              <Accessibility className="w-4 h-4" />
             </Button>
           </div>
 
@@ -86,11 +92,12 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Button asChild className="w-full bg-primary hover:bg-white hover:text-secondary py-7 text-lg font-black uppercase tracking-widest rounded-2xl text-white transition-all shadow-xl">
-            <Link href="#iletisim" className="flex items-center justify-center gap-3" onClick={() => setIsMenuOpen(false)}>
-              Dijital Sekreterya
-              <Accessibility className="w-6 h-6" />
-            </Link>
+          <Button 
+            className="w-full bg-primary hover:bg-white hover:text-secondary py-7 text-lg font-black uppercase tracking-widest rounded-2xl text-white transition-all shadow-xl"
+            onClick={() => { onContactClick(); setIsMenuOpen(false); }}
+          >
+            Dijital iletişim
+            <Accessibility className="w-6 h-6" />
           </Button>
         </div>
       </div>

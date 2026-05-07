@@ -34,31 +34,55 @@
 
   /* Disleksi Dostu Mod Stilleri */
   .dyslexic-font {
-    font-family: 'OpenDyslexic', 'Inter', sans-serif !important;
+    font-family: 'OpenDyslexic', 'OpenDyslexicMono', sans-serif !important;
+    background-color: #fffaf0 !important;
   }
 
-  /* Disleksi Modunda Arka Plan ve Metin Rengi Zorlaması */
-  .dyslexic-font,
-  .dyslexic-font body,
+  .dyslexic-font body {
+    background-color: #fffaf0 !important;
+  }
+
+  /* Sadece metin içeren veya yapısal büyük bloklara arka plan uygula, her div'e değil */
   .dyslexic-font main,
   .dyslexic-font section,
   .dyslexic-font footer,
   .dyslexic-font nav,
-  .dyslexic-font div,
   .dyslexic-font header {
-    background-color: #fff9ed !important; /* Göz yormayan krem tonu */
+    background-color: #fffaf0 !important;
     background-image: none !important;
-    color: #1a1a1a !important; /* Tüm metinleri koyu yap */
   }
 
-  /* Tüm elementler için disleksi düzenlemeleri */
-  .dyslexic-font * {
+  /* Tüm metin elemanları için disleksi düzenlemeleri */
+  .dyslexic-font p, 
+  .dyslexic-font span, 
+  .dyslexic-font h1, 
+  .dyslexic-font h2, 
+  .dyslexic-font h3, 
+  .dyslexic-font h4, 
+  .dyslexic-font h5, 
+  .dyslexic-font h6,
+  .dyslexic-font li,
+  .dyslexic-font a,
+  .dyslexic-font label {
     text-align: left !important;
     line-height: 2 !important;
-    letter-spacing: 0.15em !important;
-    word-spacing: 0.2em !important;
-    color: #1a1a1a !important; /* Beyaz metinleri de koyu griye zorla */
-    border-color: rgba(26, 26, 26, 0.2) !important;
+    letter-spacing: 0.12em !important;
+    word-spacing: 0.25em !important;
+    color: #000000 !important; 
+    font-weight: 500 !important;
+  }
+
+  /* Disleksi Cetveli (Reading Ruler) için temel stil */
+  .reading-ruler {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255, 240, 0, 0.25);
+    border-top: 2px solid rgba(255, 240, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 240, 0, 0.5);
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
   }
 
   /* Butonlar için disleksi modunda görünürlük ayarı */

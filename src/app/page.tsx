@@ -3,45 +3,46 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { Biography } from '@/components/Biography';
 import { LegislativeTimeline } from '@/components/LegislativeTimeline';
-import { GlobalAdvocacy } from '@/components/GlobalAdvocacy';
 import { MovieSection } from '@/components/MovieSection';
-import { NobelVision } from '@/components/NobelVision';
+import { StrategicImpact } from '@/components/StrategicImpact';
 import { DigitalSecretariat } from '@/components/DigitalSecretariat';
 import { Footer } from '@/components/Footer';
 import { AccessibilityOverlay } from '@/components/AccessibilityOverlay';
 import { Toaster } from '@/components/ui/toaster';
 
+import { VisionMissionTabs } from '@/components/VisionMissionTabs';
+
 export default function Home() {
-  // 1. State Yönetimi (Accessibility Engine)
+  // 1. Accessibility Engine State
   const [fontSize, setFontSize] = useState(100);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isDyslexic, setIsDyslexic] = useState(false);
   const [isReadingMode, setIsReadingMode] = useState(false);
 
-  // 2. Erişilebilirlik Motoru: State değişimlerini document üzerine anlık yansıtır
+  // 2. Contact Modal State
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  // 3. Strategic Impact Trigger State
+  const [selectedImpactId, setSelectedImpactId] = useState<string | null>(null);
+
+  // 4. Erişilebilirlik Motoru: State değişimlerini document üzerine anlık yansıtır
   useEffect(() => {
     const root = document.documentElement;
-
-    // Font Ölçeklendirme (%100 - %150)
     root.style.fontSize = `${fontSize}%`;
 
-    // Kontrast Modu (Filtre Uygulaması)
     if (isHighContrast) {
       root.style.filter = 'grayscale(1) contrast(200%)';
     } else {
       root.style.filter = 'none';
     }
 
-    // Disleksi Sınıfı
     if (isDyslexic) {
       root.classList.add('dyslexic-font');
     } else {
       root.classList.remove('dyslexic-font');
     }
 
-    // Okuma Modu Sınıfı
     if (isReadingMode) {
       root.classList.add('reading-mode');
     } else {
@@ -50,10 +51,9 @@ export default function Home() {
   }, [fontSize, isHighContrast, isDyslexic, isReadingMode]);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
+    <div className="flex flex-col min-h-screen bg-white">
+      <Navbar onContactClick={() => setIsContactOpen(true)} />
       
-      {/* 3. Kontrollü Bileşen: State ve Setter'lar prop olarak iletiliyor */}
       <AccessibilityOverlay 
         fontSize={fontSize}
         setFontSize={setFontSize}
@@ -71,17 +71,23 @@ export default function Home() {
         }}
       />
       
-      <main>
-        <Hero />
-        <Biography />
+      <main className="space-y-0">
+        <Hero 
+          onContactClick={() => setIsContactOpen(true)} 
+          onNobelClick={() => setSelectedImpactId('nobel')}
+        />
         <LegislativeTimeline />
-        <GlobalAdvocacy />
+        <VisionMissionTabs />
+        <StrategicImpact 
+          externalImpactId={selectedImpactId} 
+          onClearExternal={() => setSelectedImpactId(null)} 
+        />
         <MovieSection />
-        <NobelVision />
-        <DigitalSecretariat />
       </main>
 
-      <Footer />
+      <DigitalSecretariat isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
+
+      <Footer onContactClick={() => setIsContactOpen(true)} />
       <Toaster />
     </div>
   );
