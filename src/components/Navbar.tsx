@@ -23,7 +23,7 @@ export function Navbar({ onContactClick }: NavbarProps) {
   ];
 
   return (
-    <nav className="sticky top-0 z-[100] bg-secondary border-b border-white/10 shadow-xl">
+    <nav className="sticky top-0 z-[100] bg-secondary border-b border-black/5 shadow-xl">
       <div className="container px-4">
         <div className="flex items-center h-16">
           {/* Logo - Left side */}
@@ -78,7 +78,7 @@ export function Navbar({ onContactClick }: NavbarProps) {
 
       {/* Mobile Menu */}
       <div className={cn(
-        "lg:hidden absolute top-[80px] left-0 w-full bg-secondary border-b border-white/10 shadow-2xl transition-all duration-500 ease-in-out z-[90] overflow-hidden",
+        "lg:hidden absolute top-[80px] left-0 w-full bg-secondary border-b border-black/5 shadow-2xl transition-all duration-500 ease-in-out z-[90] overflow-hidden",
         isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 pointer-events-none"
       )}>
         <div className="container px-6 py-10 flex flex-col gap-5">

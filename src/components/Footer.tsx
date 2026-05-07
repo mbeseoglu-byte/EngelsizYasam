@@ -33,7 +33,7 @@ export function Footer({ onContactClick }: FooterProps) {
     <footer className="bg-[#0a192f] text-white pt-8 pb-4 relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-1/4 h-full bg-secondary/5 skew-y-12 translate-y-1/2" />
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-4 border-b border-white/5 pb-4">
+        <div className="grid md:grid-cols-3 gap-12 mb-4 border-b border-secondary/20 pb-4">
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#0a192f] shadow-lg">

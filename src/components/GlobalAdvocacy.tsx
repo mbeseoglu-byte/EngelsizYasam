@@ -26,7 +26,7 @@ export function GlobalAdvocacy() {
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {stats.map((stat, i) => ( stat &&
-              <div key={i} className="p-4 bg-muted/30 rounded-2xl border border-primary/5 hover:bg-white hover:shadow-md transition-all">
+              <div key={i} className="p-4 bg-muted/30 rounded-2xl border border-secondary/20 hover:bg-white hover:border-secondary/40 hover:shadow-md transition-all">
                 <div className="text-secondary mb-2">{stat.icon}</div>
                 <div className="text-sm font-black text-primary mb-1">{stat.value}</div>
                 <div className="text-[9px] font-bold text-muted-foreground uppercase tracking-tighter">{stat.label}</div>

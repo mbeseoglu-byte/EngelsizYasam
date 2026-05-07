@@ -33,7 +33,7 @@ export function NobelVision() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {values.map((item, idx) => (
-            <div key={idx} className="group p-6 bg-white/5 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-all duration-500">
+            <div key={idx} className="group p-6 bg-white/5 rounded-[2rem] border border-[#ffc107]/20 hover:bg-white/10 hover:border-[#ffc107]/40 transition-all duration-500">
               <div className="w-10 h-10 bg-[#ffc107] rounded-xl flex items-center justify-center text-[#0a192f] mb-4 shadow-lg group-hover:rotate-3 transition-transform">
                 {item.icon}
               </div>

@@ -15,7 +15,7 @@ export function Hero({ onContactClick, onNobelClick }: HeroProps) {
   const profileImage = "https://media-cdn.t24.com.tr/media/library/2019/05/1558475293655-untitled-1.jpg";
 
   return (
-    <section className="relative overflow-hidden bg-white pt-6 pb-6 lg:pt-8 lg:pb-8 border-b border-border text-left">
+    <section className="relative overflow-hidden bg-white pt-6 pb-6 lg:pt-8 lg:pb-8 border-b border-secondary/20 text-left">
       <div className="absolute top-0 left-0 w-1/2 h-full bg-primary/5 -skew-x-12 -translate-x-1/4 -z-10" />
       <div className="container px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">

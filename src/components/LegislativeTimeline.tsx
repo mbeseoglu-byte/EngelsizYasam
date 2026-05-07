@@ -43,7 +43,7 @@ export function LegislativeTimeline() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {achievements.map((item, idx) => (
             <div key={idx} className="relative group">
-              <Card className="h-full border-none shadow-sm hover:shadow-xl transition-all duration-500 rounded-[2rem] bg-white group overflow-hidden">
+              <Card className="h-full border border-secondary/20 shadow-sm hover:shadow-xl hover:border-secondary/40 transition-all duration-500 rounded-[2rem] bg-white group overflow-hidden">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-3xl font-black text-secondary/20">{item.year}</div>
